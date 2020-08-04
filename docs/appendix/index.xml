@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第四部分 附录 on 叶王笔记</title>
+    <link>https://ikingye.github.io/study-javascript/docs/appendix/</link>
+    <description>Recent content in 第四部分 附录 on 叶王笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="https://ikingye.github.io/study-javascript/docs/appendix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>教程</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/turorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/turorial/</guid>
+      <description>教程 #  基础 #  ruanyf/jstraining #  全栈工程师培训材料，帮助学习者掌握 JavaScript 全栈开发的基本知识，承担简单 Web 应用的前后端开发。
+一共四讲，适合两天的训练营。
+denysdovhan/wtfjs #  A list of funny and tricky JavaScript examples
+nefe/You-Dont-Need-jQuery #  使用原生方法实现 jQuery API 功能（暂时只支持 IE10 以上浏览器）。
+ 进阶 #   </description>
+    </item>
+    
+    <item>
+      <title>4.3 关注项目</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/attention/</guid>
+      <description>关注项目 #  octokit/rest.js #  GitHub REST API client for JavaScript https://octokit.github.io/rest.js/</description>
+    </item>
+    
+  </channel>
+</rss>

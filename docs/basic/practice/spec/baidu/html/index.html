@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HTML 编码规范 #  1 前言
+2 代码风格
+2.1 缩进与换行
+2.2 命名
+2.3 标签
+2.4 属性
+3 通用
+3.1 DOCTYPE
+3.2 编码
+3.3 CSS 和 JavaScript 引入
+4 head
+4.1 title
+4.2 favicon
+4.3 viewport
+5 图片
+6 表单
+6.1 控件标题
+6.2 按钮
+6.3 可访问性 (A11Y)
+7 多媒体
+8 模板中的 HTML
+1 前言 #  HTML 作为描述网页结构的超文本标记语言，在百度一直有着广泛的应用。本文档的目标是使 HTML 代码风格保持一致，容易被理解和被维护。
+任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
+2 代码风格 #  2.1 缩进与换行 #  [强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。 #  解释： 对于非 HTML 标签之间的缩进，比如 script 或 style 标签内容缩进，与 script 或 style 标签的缩进同级。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="HTML 编码规范 #  1 前言
+2 代码风格
+2.1 缩进与换行
+2.2 命名
+2.3 标签
+2.4 属性
+3 通用
+3.1 DOCTYPE
+3.2 编码
+3.3 CSS 和 JavaScript 引入
+4 head
+4.1 title
+4.2 favicon
+4.3 viewport
+5 图片
+6 表单
+6.1 控件标题
+6.2 按钮
+6.3 可访问性 (A11Y)
+7 多媒体
+8 模板中的 HTML
+1 前言 #  HTML 作为描述网页结构的超文本标记语言，在百度一直有着广泛的应用。本文档的目标是使 HTML 代码风格保持一致，容易被理解和被维护。
+任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
+2 代码风格 #  2.1 缩进与换行 #  [强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。 #  解释： 对于非 HTML 标签之间的缩进，比如 script 或 style 标签内容缩进，与 script 或 style 标签的缩进同级。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/" />
+
+<title>Html | 叶王笔记</title>
+<link rel="manifest" href="/study-javascript/manifest.json">
+<link rel="icon" href="/study-javascript/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/study-javascript/book.min.054d088be523033861c169923260cc3eacd88fa7d58c8be9c5071b5a83323017.css" integrity="sha256-BU0Ii&#43;UjAzhhwWmSMmDMPqzYj6fVjIvpxQcbWoMyMBc=">
+<script defer src="/study-javascript/en.search.min.25047df628deabdf3f092d05b1927dde686932652d9cd24ea98e1c72294da81e.js" integrity="sha256-JQR99ijeq98/CS0FsZJ93mhpMmUtnNJOqY4ccilNqB4="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/study-javascript"><span>叶王笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">
+    Github  <img src="https://img.shields.io/github/followers/ikingye.svg?label=%E5%85%B3%E6%B3%A8">
+  </a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">
+    微博  <img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_16x16.png">
+  </a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+  <li><a href="//shang.qq.com/wpa/qunwpa?idkey=04022778c1def4c4938c6d1e1880f6db3abf67bbfccc9ff74baa4fa9d73c377f&source_id=1_40001" target="_blank" rel="noopener noreferrer">Q 群</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <span>第一部分 基础入门</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/" class="">实践</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/" class="collapsed ">编程规范</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/" class="">百度</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/" class="collapsed ">百度前端编程规范</a>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/css/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/es-next/" class="">Es Next</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/html/" class="active">Html</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/typescript/" class="">Typescript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/spec/baidu/vue/" class="">Vue</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/basic/practice/snippet/" class="collapsed ">代码片段</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第二部分 设计</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+  </ul>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  
+  
+  
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/appendix/turorial/" class="">教程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/appendix/interview/" class="collapsed ">4.2 面试题</a>
+  
+
+          
+  
+  
+  
+
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+    <a href="/study-javascript/docs/appendix/attention/" class="">4.3 关注项目</a>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+        </li>
+      
+    
+  </ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">关注微信公众号</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png" target="_blank" rel="noopener noreferrer">请我喝饮料</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">加我微信</a></li>
+</ul>
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-javascript/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Html</strong>
+
+  <label for="toc-control">
+    
+    <img src="/study-javascript/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-前言">1 前言</a></li>
+    <li><a href="#2-代码风格">2 代码风格</a>
+      <ul>
+        <li><a href="#21-缩进与换行">2.1 缩进与换行</a>
+          <ul>
+            <li><a href="#强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格-或-tab-字符">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格 或 <code>tab</code> 字符。</a></li>
+            <li><a href="#建议-每行不得超过-120-个字符">[建议] 每行不得超过 <code>120</code> 个字符。</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-命名">2.2 命名</a>
+          <ul>
+            <li><a href="#强制-class-必须单词全字母小写单词间以---分隔">[强制] <code>class</code> 必须单词全字母小写，单词间以 <code>-</code> 分隔。</a></li>
+            <li><a href="#强制-class-必须代表相应模块或部件的内容或功能不得以样式信息进行命名">[强制] <code>class</code> 必须代表相应模块或部件的内容或功能，不得以样式信息进行命名。</a></li>
+            <li><a href="#强制-元素-id-必须保证页面唯一">[强制] 元素 <code>id</code> 必须保证页面唯一。</a></li>
+            <li><a href="#建议-id-建议单词全字母小写单词间以---分隔同项目必须保持风格一致">[建议] <code>id</code> 建议单词全字母小写，单词间以 <code>-</code> 分隔。同项目必须保持风格一致。</a></li>
+            <li><a href="#建议-idclass-命名在避免冲突并描述清楚的前提下尽可能短">[建议] <code>id</code>、<code>class</code> 命名，在避免冲突并描述清楚的前提下尽可能短。</a></li>
+            <li><a href="#强制-禁止为了-hook-脚本创建无样式信息的-class">[强制] 禁止为了 <code>hook 脚本</code>，创建无样式信息的 <code>class</code>。</a></li>
+            <li><a href="#强制-同一页面应避免使用相同的-name-与-id">[强制] 同一页面，应避免使用相同的 <code>name</code> 与 <code>id</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#23-标签">2.3 标签</a>
+          <ul>
+            <li><a href="#强制-标签名必须使用小写字母">[强制] 标签名必须使用小写字母。</a></li>
+            <li><a href="#强制-对于无需自闭合的标签不允许自闭合">[强制] 对于无需自闭合的标签，不允许自闭合。</a></li>
+            <li><a href="#强制-对-html5-中规定允许省略的闭合标签不允许省略闭合标签">[强制] 对 <code>HTML5</code> 中规定允许省略的闭合标签，不允许省略闭合标签。</a></li>
+            <li><a href="#强制-标签使用必须符合标签嵌套规则">[强制] 标签使用必须符合标签嵌套规则。</a></li>
+            <li><a href="#建议-html-标签的使用应该遵循标签的语义">[建议] HTML 标签的使用应该遵循标签的语义。</a></li>
+            <li><a href="#建议-在-css-可以实现相同需求的情况下不得使用表格进行布局">[建议] 在 CSS 可以实现相同需求的情况下不得使用表格进行布局。</a></li>
+            <li><a href="#建议-标签的使用应尽量简洁减少不必要的标签">[建议] 标签的使用应尽量简洁，减少不必要的标签。</a></li>
+          </ul>
+        </li>
+        <li><a href="#24-属性">2.4 属性</a>
+          <ul>
+            <li><a href="#强制-属性名必须使用小写字母">[强制] 属性名必须使用小写字母。</a></li>
+            <li><a href="#强制-属性值必须用双引号包围">[强制] 属性值必须用双引号包围。</a></li>
+            <li><a href="#强制-属性名与属性值中间不得存在空格">[强制] 属性名与属性值中间不得存在空格。</a></li>
+            <li><a href="#建议-布尔类型的属性建议不添加属性值">[建议] 布尔类型的属性，建议不添加属性值。</a></li>
+            <li><a href="#建议-自定义属性建议以-xxx--为前缀推荐使用-data-">[建议] 自定义属性建议以 <code>xxx-</code> 为前缀，推荐使用 <code>data-</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-通用">3 通用</a>
+      <ul>
+        <li><a href="#31-doctype">3.1 DOCTYPE</a>
+          <ul>
+            <li><a href="#强制-使用-html5-的-doctype-来启用标准模式建议使用大写的-doctype">[强制] 使用 <code>HTML5</code> 的 <code>doctype</code> 来启用标准模式，建议使用大写的 <code>DOCTYPE</code>。</a></li>
+            <li><a href="#建议-启用-ie-edge-模式">[建议] 启用 IE Edge 模式。</a></li>
+            <li><a href="#建议-在-html-标签上设置正确的-lang-属性">[建议] 在 <code>html</code> 标签上设置正确的 <code>lang</code> 属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-编码">3.2 编码</a>
+          <ul>
+            <li><a href="#强制-页面必须使用精简形式明确指定字符编码指定字符编码的-meta-必须是-head-的第一个直接子元素">[强制] 页面必须使用精简形式，明确指定字符编码。指定字符编码的 <code>meta</code> 必须是 <code>head</code> 的第一个直接子元素。</a></li>
+            <li><a href="#建议-html-文件使用无-bom-的-utf-8-编码">[建议] <code>HTML</code> 文件使用无 <code>BOM</code> 的 <code>UTF-8</code> 编码。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-css-和-javascript-引入">3.3 CSS 和 JavaScript 引入</a>
+          <ul>
+            <li><a href="#强制-引入-css-时必须指明-relstylesheet">[强制] 引入 <code>CSS</code> 时必须指明 <code>rel=&quot;stylesheet&quot;</code>。</a></li>
+            <li><a href="#建议-引入-css-和-javascript-时无须指明-type-属性">[建议] 引入 <code>CSS</code> 和 <code>JavaScript</code> 时无须指明 <code>type</code> 属性。</a></li>
+            <li><a href="#建议-展现定义放置于外部-css-中行为定义放置于外部-javascript-中">[建议] 展现定义放置于外部 <code>CSS</code> 中，行为定义放置于外部 <code>JavaScript</code> 中。</a></li>
+            <li><a href="#建议-在-head-中引入页面需要的所有-css-资源">[建议] 在 <code>head</code> 中引入页面需要的所有 <code>CSS</code> 资源。</a></li>
+            <li><a href="#建议-javascript-应当放在页面末尾或采用异步加载">[建议] <code>JavaScript</code> 应当放在页面末尾，或采用异步加载。</a></li>
+            <li><a href="#建议-移动环境或只针对现代浏览器设计的-web-应用如果引用外部资源的-url-协议部分与页面相同建议省略协议前缀">[建议] 移动环境或只针对现代浏览器设计的 Web 应用，如果引用外部资源的 <code>URL</code> 协议部分与页面相同，建议省略协议前缀。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-head">4 head</a>
+      <ul>
+        <li><a href="#41-title">4.1 title</a>
+          <ul>
+            <li><a href="#强制-页面必须包含-title-标签声明标题">[强制] 页面必须包含 <code>title</code> 标签声明标题。</a></li>
+            <li><a href="#强制-title-必须作为-head-的直接子元素并紧随-charset-声明之后">[强制] <code>title</code> 必须作为 <code>head</code> 的直接子元素，并紧随 <code>charset</code> 声明之后。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-favicon">4.2 favicon</a>
+          <ul>
+            <li><a href="#强制-保证-favicon-可访问">[强制] 保证 <code>favicon</code> 可访问。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-viewport">4.3 viewport</a>
+          <ul>
+            <li><a href="#建议-若页面欲对移动设备友好需指定页面的-viewport">[建议] 若页面欲对移动设备友好，需指定页面的 <code>viewport</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-图片">5 图片</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#强制-禁止-img-的-src-取值为空延迟加载的图片也要增加默认的-src">[强制] 禁止 <code>img</code> 的 <code>src</code> 取值为空。延迟加载的图片也要增加默认的 <code>src</code>。</a></li>
+            <li><a href="#建议-避免为-img-添加不必要的-title-属性">[建议] 避免为 <code>img</code> 添加不必要的 <code>title</code> 属性。</a></li>
+            <li><a href="#建议-为重要图片添加-alt-属性">[建议] 为重要图片添加 <code>alt</code> 属性。</a></li>
+            <li><a href="#建议-添加-width-和-height-属性以避免页面抖动">[建议] 添加 <code>width</code> 和 <code>height</code> 属性，以避免页面抖动。</a></li>
+            <li><a href="#建议-有下载需求的图片采用-img-标签实现无下载需求的图片采用-css-背景图实现">[建议] 有下载需求的图片采用 <code>img</code> 标签实现，无下载需求的图片采用 CSS 背景图实现。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-表单">6 表单</a>
+      <ul>
+        <li><a href="#61-控件标题">6.1 控件标题</a>
+          <ul>
+            <li><a href="#强制-有文本标题的控件必须使用-label-标签将其与其标题相关联">[强制] 有文本标题的控件必须使用 <code>label</code> 标签将其与其标题相关联。</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-按钮">6.2 按钮</a>
+          <ul>
+            <li><a href="#强制-使用-button-元素时必须指明-type-属性值">[强制] 使用 <code>button</code> 元素时必须指明 <code>type</code> 属性值。</a></li>
+            <li><a href="#建议-尽量不要使用按钮类元素的-name-属性">[建议] 尽量不要使用按钮类元素的 <code>name</code> 属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-可访问性-a11y">6.3 可访问性 (A11Y)</a>
+          <ul>
+            <li><a href="#建议-负责主要功能的按钮在-dom-中的顺序应靠前">[建议] 负责主要功能的按钮在 DOM 中的顺序应靠前。</a></li>
+            <li><a href="#建议-当使用-javascript-进行表单提交时如果条件允许应使原生提交功能正常工作">[建议] 当使用 JavaScript 进行表单提交时，如果条件允许，应使原生提交功能正常工作。</a></li>
+            <li><a href="#建议-在针对移动设备开发的页面时根据内容类型指定输入框的-type-属性">[建议] 在针对移动设备开发的页面时，根据内容类型指定输入框的 <code>type</code> 属性。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7-多媒体">7 多媒体</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#建议-当在现代浏览器中使用-audio-以及-video-标签来播放音频视频时应当注意格式">[建议] 当在现代浏览器中使用 <code>audio</code> 以及 <code>video</code> 标签来播放音频、视频时，应当注意格式。</a></li>
+            <li><a href="#建议-在支持-html5-的浏览器中优先使用-audio-和-video-标签来定义音视频元素">[建议] 在支持 <code>HTML5</code> 的浏览器中优先使用 <code>audio</code> 和 <code>video</code> 标签来定义音视频元素。</a></li>
+            <li><a href="#建议-使用退化到插件的方式来对多浏览器进行支持">[建议] 使用退化到插件的方式来对多浏览器进行支持。</a></li>
+            <li><a href="#建议-只在必要的时候开启音视频的自动播放">[建议] 只在必要的时候开启音视频的自动播放。</a></li>
+            <li><a href="#建议-在-object-标签内部提供指示浏览器不支持该标签的说明">[建议] 在 <code>object</code> 标签内部提供指示浏览器不支持该标签的说明。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#8-模板中的-html">8 模板中的 HTML</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#建议-模板代码的缩进优先保证-html-代码的缩进规则">[建议] 模板代码的缩进优先保证 HTML 代码的缩进规则。</a></li>
+            <li><a href="#建议-模板代码应以保证-html-单个标签语法的正确性为基本原则">[建议] 模板代码应以保证 HTML 单个标签语法的正确性为基本原则。</a></li>
+            <li><a href="#建议-在循环处理模板数据构造表格时若要求每行输出固定的个数建议先将数据分组之后再循环输出">[建议] 在循环处理模板数据构造表格时，若要求每行输出固定的个数，建议先将数据分组，之后再循环输出。</a></li>
+          </ul>
+        </li>
+        <li><a href="#建议-新窗口标签页打开的链接需要按业务需要添加安全相关的-rel-属性值-noopener">[建议] 新窗口/标签页打开的链接需要按业务需要添加安全相关的 <code>rel</code> 属性值 <code>noopener</code>。</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="html-编码规范">
+  HTML 编码规范
+  <a class="anchor" href="#html-%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83">#</a>
+</h1>
+<p><a href="#1">1 前言</a></p>
+<p><a href="#2">2 代码风格</a></p>
+<p><a href="#2-1">2.1 缩进与换行</a></p>
+<p><a href="#2-2">2.2 命名</a></p>
+<p><a href="#2-3">2.3 标签</a></p>
+<p><a href="#2-4">2.4 属性</a></p>
+<p><a href="#3">3 通用</a></p>
+<p><a href="#3-1-doctype">3.1 DOCTYPE</a></p>
+<p><a href="#3-2">3.2 编码</a></p>
+<p><a href="#3-3-css-javascript">3.3 CSS 和 JavaScript 引入</a></p>
+<p><a href="#4-head">4 head</a></p>
+<p><a href="#4-1-title">4.1 title</a></p>
+<p><a href="#4-2-favicon">4.2 favicon</a></p>
+<p><a href="#4-3-viewport">4.3 viewport</a></p>
+<p><a href="#5">5 图片</a></p>
+<p><a href="#6">6 表单</a></p>
+<p><a href="#6-1">6.1 控件标题</a></p>
+<p><a href="#6-2">6.2 按钮</a></p>
+<p><a href="#6-3-a11y">6.3 可访问性 (A11Y)</a></p>
+<p><a href="#7">7 多媒体</a></p>
+<p><a href="#8-html">8 模板中的 HTML</a></p>
+<h2 id="1-前言">
+  1 前言
+  <a class="anchor" href="#1-%e5%89%8d%e8%a8%80">#</a>
+</h2>
+<p>HTML 作为描述网页结构的超文本标记语言，在百度一直有着广泛的应用。本文档的目标是使 HTML 代码风格保持一致，容易被理解和被维护。</p>
+<p>任何问题或建议，欢迎跟我们讨论: <a href="mailto:fe-styleguide@baidu.com">fe-styleguide@baidu.com</a></p>
+<h2 id="2-代码风格">
+  2 代码风格
+  <a class="anchor" href="#2-%e4%bb%a3%e7%a0%81%e9%a3%8e%e6%a0%bc">#</a>
+</h2>
+<h3 id="21-缩进与换行">
+  2.1 缩进与换行
+  <a class="anchor" href="#21-%e7%bc%a9%e8%bf%9b%e4%b8%8e%e6%8d%a2%e8%a1%8c">#</a>
+</h3>
+<h4 id="强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格-或-tab-字符">
+  [强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格 或 <code>tab</code> 字符。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-4-%e4%b8%aa%e7%a9%ba%e6%a0%bc%e5%81%9a%e4%b8%ba%e4%b8%80%e4%b8%aa%e7%bc%a9%e8%bf%9b%e5%b1%82%e7%ba%a7%e4%b8%8d%e5%85%81%e8%ae%b8%e4%bd%bf%e7%94%a8-2-%e4%b8%aa%e7%a9%ba%e6%a0%bc-%e6%88%96-tab-%e5%ad%97%e7%ac%a6">#</a>
+</h4>
+<p>解释：
+对于非 HTML 标签之间的缩进，比如 script 或 style 标签内容缩进，与 script 或 style 标签的缩进同级。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span>&gt;
+  <span style="color:#75715e">/* 样式内容的第一级缩进与所属的 style 标签对齐 */</span>
+  <span style="color:#f92672">ul</span> {
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+  }
+&lt;/<span style="color:#f92672">style</span>&gt;
+&lt;<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;first&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;second&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#75715e">// 脚本代码的第一级缩进与所属的 script 标签对齐
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">require</span>([<span style="color:#e6db74">&#34;app&#34;</span>], <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">app</span>) {
+    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">init</span>();
+  });
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h4 id="建议-每行不得超过-120-个字符">
+  [建议] 每行不得超过 <code>120</code> 个字符。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%af%8f%e8%a1%8c%e4%b8%8d%e5%be%97%e8%b6%85%e8%bf%87-120-%e4%b8%aa%e5%ad%97%e7%ac%a6">#</a>
+</h4>
+<p>解释：</p>
+<p>过长的代码不容易阅读与维护。但是考虑到 HTML 的特殊性，不做硬性要求。</p>
+<h3 id="22-命名">
+  2.2 命名
+  <a class="anchor" href="#22-%e5%91%bd%e5%90%8d">#</a>
+</h3>
+<h4 id="强制-class-必须单词全字母小写单词间以---分隔">
+  [强制] <code>class</code> 必须单词全字母小写，单词间以 <code>-</code> 分隔。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-class-%e5%bf%85%e9%a1%bb%e5%8d%95%e8%af%8d%e5%85%a8%e5%ad%97%e6%af%8d%e5%b0%8f%e5%86%99%e5%8d%95%e8%af%8d%e9%97%b4%e4%bb%a5---%e5%88%86%e9%9a%94">#</a>
+</h4>
+<h4 id="强制-class-必须代表相应模块或部件的内容或功能不得以样式信息进行命名">
+  [强制] <code>class</code> 必须代表相应模块或部件的内容或功能，不得以样式信息进行命名。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-class-%e5%bf%85%e9%a1%bb%e4%bb%a3%e8%a1%a8%e7%9b%b8%e5%ba%94%e6%a8%a1%e5%9d%97%e6%88%96%e9%83%a8%e4%bb%b6%e7%9a%84%e5%86%85%e5%ae%b9%e6%88%96%e5%8a%9f%e8%83%bd%e4%b8%8d%e5%be%97%e4%bb%a5%e6%a0%b7%e5%bc%8f%e4%bf%a1%e6%81%af%e8%bf%9b%e8%a1%8c%e5%91%bd%e5%90%8d">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sidebar&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="强制-元素-id-必须保证页面唯一">
+  [强制] 元素 <code>id</code> 必须保证页面唯一。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%85%83%e7%b4%a0-id-%e5%bf%85%e9%a1%bb%e4%bf%9d%e8%af%81%e9%a1%b5%e9%9d%a2%e5%94%af%e4%b8%80">#</a>
+</h4>
+<p>解释：</p>
+<p>同一个页面中，不同的元素包含相同的 <code>id</code>，不符合 <code>id</code> 的属性含义。并且使用 <code>document.getElementById</code> 时可能导致难以追查的问题。</p>
+<h4 id="建议-id-建议单词全字母小写单词间以---分隔同项目必须保持风格一致">
+  [建议] <code>id</code> 建议单词全字母小写，单词间以 <code>-</code> 分隔。同项目必须保持风格一致。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-id-%e5%bb%ba%e8%ae%ae%e5%8d%95%e8%af%8d%e5%85%a8%e5%ad%97%e6%af%8d%e5%b0%8f%e5%86%99%e5%8d%95%e8%af%8d%e9%97%b4%e4%bb%a5---%e5%88%86%e9%9a%94%e5%90%8c%e9%a1%b9%e7%9b%ae%e5%bf%85%e9%a1%bb%e4%bf%9d%e6%8c%81%e9%a3%8e%e6%a0%bc%e4%b8%80%e8%87%b4">#</a>
+</h4>
+<h4 id="建议-idclass-命名在避免冲突并描述清楚的前提下尽可能短">
+  [建议] <code>id</code>、<code>class</code> 命名，在避免冲突并描述清楚的前提下尽可能短。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-idclass-%e5%91%bd%e5%90%8d%e5%9c%a8%e9%81%bf%e5%85%8d%e5%86%b2%e7%aa%81%e5%b9%b6%e6%8f%8f%e8%bf%b0%e6%b8%85%e6%a5%9a%e7%9a%84%e5%89%8d%e6%8f%90%e4%b8%8b%e5%b0%bd%e5%8f%af%e8%83%bd%e7%9f%ad">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigation&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comment&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;com&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+
+<span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+</code></pre></div><h4 id="强制-禁止为了-hook-脚本创建无样式信息的-class">
+  [强制] 禁止为了 <code>hook 脚本</code>，创建无样式信息的 <code>class</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e7%a6%81%e6%ad%a2%e4%b8%ba%e4%ba%86-hook-%e8%84%9a%e6%9c%ac%e5%88%9b%e5%bb%ba%e6%97%a0%e6%a0%b7%e5%bc%8f%e4%bf%a1%e6%81%af%e7%9a%84-class">#</a>
+</h4>
+<p>解释：</p>
+<p>不允许 <code>class</code> 只用于让 JavaScript 选择某些元素，<code>class</code> 应该具有明确的语义和样式。否则容易导致 CSS class 泛滥。</p>
+<p>使用 <code>id</code>、属性选择作为 hook 是更好的方式。</p>
+<h4 id="强制-同一页面应避免使用相同的-name-与-id">
+  [强制] 同一页面，应避免使用相同的 <code>name</code> 与 <code>id</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%90%8c%e4%b8%80%e9%a1%b5%e9%9d%a2%e5%ba%94%e9%81%bf%e5%85%8d%e4%bd%bf%e7%94%a8%e7%9b%b8%e5%90%8c%e7%9a%84-name-%e4%b8%8e-id">#</a>
+</h4>
+<p>解释：</p>
+<p>IE 浏览器会混淆元素的 <code>id</code> 和 <code>name</code> 属性， <code>document.getElementById</code> 可能获得不期望的元素。所以在对元素的 <code>id</code> 与 <code>name</code> 属性的命名需要非常小心。</p>
+<p>一个比较好的实践是，为 <code>id</code> 和 <code>name</code> 使用不同的命名法。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo&#34;</span> /&gt;
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#75715e">// IE6 将显示 INPUT
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">alert</span>(document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;foo&#34;</span>).<span style="color:#a6e22e">tagName</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="23-标签">
+  2.3 标签
+  <a class="anchor" href="#23-%e6%a0%87%e7%ad%be">#</a>
+</h3>
+<h4 id="强制-标签名必须使用小写字母">
+  [强制] 标签名必须使用小写字母。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e6%a0%87%e7%ad%be%e5%90%8d%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8%e5%b0%8f%e5%86%99%e5%ad%97%e6%af%8d">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">p</span>&gt;Hello StyleGuide!&lt;/<span style="color:#f92672">p</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">p</span>&gt;Hello StyleGuide!&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><h4 id="强制-对于无需自闭合的标签不允许自闭合">
+  [强制] 对于无需自闭合的标签，不允许自闭合。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%af%b9%e4%ba%8e%e6%97%a0%e9%9c%80%e8%87%aa%e9%97%ad%e5%90%88%e7%9a%84%e6%a0%87%e7%ad%be%e4%b8%8d%e5%85%81%e8%ae%b8%e8%87%aa%e9%97%ad%e5%90%88">#</a>
+</h4>
+<p>解释：</p>
+<p>常见无需自闭合标签有 <code>input</code>、<code>br</code>、<code>img</code>、<code>hr</code> 等。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> /&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span> /&gt;
+</code></pre></div><h4 id="强制-对-html5-中规定允许省略的闭合标签不允许省略闭合标签">
+  [强制] 对 <code>HTML5</code> 中规定允许省略的闭合标签，不允许省略闭合标签。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%af%b9-html5-%e4%b8%ad%e8%a7%84%e5%ae%9a%e5%85%81%e8%ae%b8%e7%9c%81%e7%95%a5%e7%9a%84%e9%97%ad%e5%90%88%e6%a0%87%e7%ad%be%e4%b8%8d%e5%85%81%e8%ae%b8%e7%9c%81%e7%95%a5%e9%97%ad%e5%90%88%e6%a0%87%e7%ad%be">#</a>
+</h4>
+<p>解释：</p>
+<p>对代码体积要求非常严苛的场景，可以例外。比如：第三方页面使用的投放系统。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;first&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;second&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;first&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;second&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><h4 id="强制-标签使用必须符合标签嵌套规则">
+  [强制] 标签使用必须符合标签嵌套规则。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e6%a0%87%e7%ad%be%e4%bd%bf%e7%94%a8%e5%bf%85%e9%a1%bb%e7%ac%a6%e5%90%88%e6%a0%87%e7%ad%be%e5%b5%8c%e5%a5%97%e8%a7%84%e5%88%99">#</a>
+</h4>
+<p>解释：</p>
+<p>比如 <code>div</code> 不得置于 <code>p</code> 中，<code>tbody</code> 必须置于 <code>table</code> 中。</p>
+<p>详细的标签嵌套规则参见<a href="http://www.cs.tut.fi/~jkorpela/html5.dtd">HTML DTD</a>中的 <code>Elements</code> 定义部分。</p>
+<h4 id="建议-html-标签的使用应该遵循标签的语义">
+  [建议] HTML 标签的使用应该遵循标签的语义。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-html-%e6%a0%87%e7%ad%be%e7%9a%84%e4%bd%bf%e7%94%a8%e5%ba%94%e8%af%a5%e9%81%b5%e5%be%aa%e6%a0%87%e7%ad%be%e7%9a%84%e8%af%ad%e4%b9%89">#</a>
+</h4>
+<p>解释：</p>
+<p>下面是常见标签语义</p>
+<ul>
+<li>p - 段落</li>
+<li>h1,h2,h3,h4,h5,h6 - 层级标题</li>
+<li>strong,em - 强调</li>
+<li>ins - 插入</li>
+<li>del - 删除</li>
+<li>abbr - 缩写</li>
+<li>code - 代码标识</li>
+<li>cite - 引述来源作品的标题</li>
+<li>q - 引用</li>
+<li>blockquote - 一段或长篇引用</li>
+<li>ul - 无序列表</li>
+<li>ol - 有序列表</li>
+<li>dl,dt,dd - 定义列表</li>
+</ul>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">p</span>&gt;
+  Esprima serves as an important &lt;<span style="color:#f92672">strong</span>&gt;building block&lt;/<span style="color:#f92672">strong</span>&gt; for some
+  JavaScript language tools.
+&lt;/<span style="color:#f92672">p</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">div</span>&gt;
+  Esprima serves as an important &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;strong&#34;</span>&gt;building block&lt;/<span style="color:#f92672">span</span>&gt; for
+  some JavaScript language tools.
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="建议-在-css-可以实现相同需求的情况下不得使用表格进行布局">
+  [建议] 在 CSS 可以实现相同需求的情况下不得使用表格进行布局。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8-css-%e5%8f%af%e4%bb%a5%e5%ae%9e%e7%8e%b0%e7%9b%b8%e5%90%8c%e9%9c%80%e6%b1%82%e7%9a%84%e6%83%85%e5%86%b5%e4%b8%8b%e4%b8%8d%e5%be%97%e4%bd%bf%e7%94%a8%e8%a1%a8%e6%a0%bc%e8%bf%9b%e8%a1%8c%e5%b8%83%e5%b1%80">#</a>
+</h4>
+<p>解释：</p>
+<p>在兼容性允许的情况下应尽量保持语义正确性。对网格对齐和拉伸性有严格要求的场景允许例外，如多列复杂表单。</p>
+<h4 id="建议-标签的使用应尽量简洁减少不必要的标签">
+  [建议] 标签的使用应尽量简洁，减少不必要的标签。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%a0%87%e7%ad%be%e7%9a%84%e4%bd%bf%e7%94%a8%e5%ba%94%e5%b0%bd%e9%87%8f%e7%ae%80%e6%b4%81%e5%87%8f%e5%b0%91%e4%b8%8d%e5%bf%85%e8%a6%81%e7%9a%84%e6%a0%87%e7%ad%be">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;avatar&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image.png&#34;</span> /&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;avatar&#34;</span>&gt;
+  &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image.png&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">span</span>&gt;
+</code></pre></div><h3 id="24-属性">
+  2.4 属性
+  <a class="anchor" href="#24-%e5%b1%9e%e6%80%a7">#</a>
+</h3>
+<h4 id="强制-属性名必须使用小写字母">
+  [强制] 属性名必须使用小写字母。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%b1%9e%e6%80%a7%e5%90%8d%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8%e5%b0%8f%e5%86%99%e5%ad%97%e6%af%8d">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">cellspacing</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;
+  ...
+&lt;/<span style="color:#f92672">table</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">cellspacing</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>&gt;
+  ...
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><h4 id="强制-属性值必须用双引号包围">
+  [强制] 属性值必须用双引号包围。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%b1%9e%e6%80%a7%e5%80%bc%e5%bf%85%e9%a1%bb%e7%94%a8%e5%8f%8c%e5%bc%95%e5%8f%b7%e5%8c%85%e5%9b%b4">#</a>
+</h4>
+<p>解释：</p>
+<p>不允许使用单引号，不允许不使用引号。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;esl.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;esl.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;esl.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h4 id="强制-属性名与属性值中间不得存在空格">
+  [强制] 属性名与属性值中间不得存在空格。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%b1%9e%e6%80%a7%e5%90%8d%e4%b8%8e%e5%b1%9e%e6%80%a7%e5%80%bc%e4%b8%ad%e9%97%b4%e4%b8%8d%e5%be%97%e5%ad%98%e5%9c%a8%e7%a9%ba%e6%a0%bc">#</a>
+</h4>
+<p>解释：</p>
+<p>按 HTML 规范 <code>=</code> 两边可以存在空格，但为了保持一致不允许添加空格。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> /&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> /&gt;
+</code></pre></div><h4 id="建议-布尔类型的属性建议不添加属性值">
+  [建议] 布尔类型的属性，建议不添加属性值。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%b8%83%e5%b0%94%e7%b1%bb%e5%9e%8b%e7%9a%84%e5%b1%9e%e6%80%a7%e5%bb%ba%e8%ae%ae%e4%b8%8d%e6%b7%bb%e5%8a%a0%e5%b1%9e%e6%80%a7%e5%80%bc">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">disabled</span> /&gt; &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">checked</span> /&gt;
+</code></pre></div><h4 id="建议-自定义属性建议以-xxx--为前缀推荐使用-data-">
+  [建议] 自定义属性建议以 <code>xxx-</code> 为前缀，推荐使用 <code>data-</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e8%87%aa%e5%ae%9a%e4%b9%89%e5%b1%9e%e6%80%a7%e5%bb%ba%e8%ae%ae%e4%bb%a5-xxx--%e4%b8%ba%e5%89%8d%e7%bc%80%e6%8e%a8%e8%8d%90%e4%bd%bf%e7%94%a8-data-">#</a>
+</h4>
+<p>解释：</p>
+<p>使用前缀有助于区分自定义属性和标准定义的属性。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">data-ui-type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Select&#34;</span>&gt;&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><h2 id="3-通用">
+  3 通用
+  <a class="anchor" href="#3-%e9%80%9a%e7%94%a8">#</a>
+</h2>
+<h3 id="31-doctype">
+  3.1 DOCTYPE
+  <a class="anchor" href="#31-doctype">#</a>
+</h3>
+<h4 id="强制-使用-html5-的-doctype-来启用标准模式建议使用大写的-doctype">
+  [强制] 使用 <code>HTML5</code> 的 <code>doctype</code> 来启用标准模式，建议使用大写的 <code>DOCTYPE</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-html5-%e7%9a%84-doctype-%e6%9d%a5%e5%90%af%e7%94%a8%e6%a0%87%e5%87%86%e6%a8%a1%e5%bc%8f%e5%bb%ba%e8%ae%ae%e4%bd%bf%e7%94%a8%e5%a4%a7%e5%86%99%e7%9a%84-doctype">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</code></pre></div><h4 id="建议-启用-ie-edge-模式">
+  [建议] 启用 IE Edge 模式。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%90%af%e7%94%a8-ie-edge-%e6%a8%a1%e5%bc%8f">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=Edge&#34;</span> /&gt;
+</code></pre></div><h4 id="建议-在-html-标签上设置正确的-lang-属性">
+  [建议] 在 <code>html</code> 标签上设置正确的 <code>lang</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8-html-%e6%a0%87%e7%ad%be%e4%b8%8a%e8%ae%be%e7%bd%ae%e6%ad%a3%e7%a1%ae%e7%9a%84-lang-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>有助于提高页面的可访问性，如：让语音合成工具确定其所应该采用的发音，令翻译工具确定其翻译语言等。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh-CN&#34;</span>&gt;&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="32-编码">
+  3.2 编码
+  <a class="anchor" href="#32-%e7%bc%96%e7%a0%81">#</a>
+</h3>
+<h4 id="强制-页面必须使用精简形式明确指定字符编码指定字符编码的-meta-必须是-head-的第一个直接子元素">
+  [强制] 页面必须使用精简形式，明确指定字符编码。指定字符编码的 <code>meta</code> 必须是 <code>head</code> 的第一个直接子元素。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e9%a1%b5%e9%9d%a2%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8%e7%b2%be%e7%ae%80%e5%bd%a2%e5%bc%8f%e6%98%8e%e7%a1%ae%e6%8c%87%e5%ae%9a%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81%e6%8c%87%e5%ae%9a%e5%ad%97%e7%ac%a6%e7%bc%96%e7%a0%81%e7%9a%84-meta-%e5%bf%85%e9%a1%bb%e6%98%af-head-%e7%9a%84%e7%ac%ac%e4%b8%80%e4%b8%aa%e7%9b%b4%e6%8e%a5%e5%ad%90%e5%85%83%e7%b4%a0">#</a>
+</h4>
+<p>解释：</p>
+<p>见 <a href="http://www.qianduan.net/html5-charset-can-it.html">HTML5 Charset 能用吗</a> 一文。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+    ......
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    ......
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h4 id="建议-html-文件使用无-bom-的-utf-8-编码">
+  [建议] <code>HTML</code> 文件使用无 <code>BOM</code> 的 <code>UTF-8</code> 编码。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-html-%e6%96%87%e4%bb%b6%e4%bd%bf%e7%94%a8%e6%97%a0-bom-%e7%9a%84-utf-8-%e7%bc%96%e7%a0%81">#</a>
+</h4>
+<p>解释：</p>
+<p><code>UTF-8</code> 编码具有更广泛的适应性。<code>BOM</code> 在使用程序或工具处理文件时可能造成不必要的干扰。</p>
+<h3 id="33-css-和-javascript-引入">
+  3.3 CSS 和 JavaScript 引入
+  <a class="anchor" href="#33-css-%e5%92%8c-javascript-%e5%bc%95%e5%85%a5">#</a>
+</h3>
+<h4 id="强制-引入-css-时必须指明-relstylesheet">
+  [强制] 引入 <code>CSS</code> 时必须指明 <code>rel=&quot;stylesheet&quot;</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%bc%95%e5%85%a5-css-%e6%97%b6%e5%bf%85%e9%a1%bb%e6%8c%87%e6%98%8e-relstylesheet">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page.css&#34;</span> /&gt;
+</code></pre></div><h4 id="建议-引入-css-和-javascript-时无须指明-type-属性">
+  [建议] 引入 <code>CSS</code> 和 <code>JavaScript</code> 时无须指明 <code>type</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%bc%95%e5%85%a5-css-%e5%92%8c-javascript-%e6%97%b6%e6%97%a0%e9%a1%bb%e6%8c%87%e6%98%8e-type-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p><code>text/css</code> 和 <code>text/javascript</code> 是 <code>type</code> 的默认值。</p>
+<h4 id="建议-展现定义放置于外部-css-中行为定义放置于外部-javascript-中">
+  [建议] 展现定义放置于外部 <code>CSS</code> 中，行为定义放置于外部 <code>JavaScript</code> 中。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%b1%95%e7%8e%b0%e5%ae%9a%e4%b9%89%e6%94%be%e7%bd%ae%e4%ba%8e%e5%a4%96%e9%83%a8-css-%e4%b8%ad%e8%a1%8c%e4%b8%ba%e5%ae%9a%e4%b9%89%e6%94%be%e7%bd%ae%e4%ba%8e%e5%a4%96%e9%83%a8-javascript-%e4%b8%ad">#</a>
+</h4>
+<p>解释：</p>
+<p>结构-样式-行为的代码分离，对于提高代码的可阅读性和维护性都有好处。</p>
+<h4 id="建议-在-head-中引入页面需要的所有-css-资源">
+  [建议] 在 <code>head</code> 中引入页面需要的所有 <code>CSS</code> 资源。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8-head-%e4%b8%ad%e5%bc%95%e5%85%a5%e9%a1%b5%e9%9d%a2%e9%9c%80%e8%a6%81%e7%9a%84%e6%89%80%e6%9c%89-css-%e8%b5%84%e6%ba%90">#</a>
+</h4>
+<p>解释：</p>
+<p>在页面渲染的过程中，新的 CSS 可能导致元素的样式重新计算和绘制，页面闪烁。</p>
+<h4 id="建议-javascript-应当放在页面末尾或采用异步加载">
+  [建议] <code>JavaScript</code> 应当放在页面末尾，或采用异步加载。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-javascript-%e5%ba%94%e5%bd%93%e6%94%be%e5%9c%a8%e9%a1%b5%e9%9d%a2%e6%9c%ab%e5%b0%be%e6%88%96%e9%87%87%e7%94%a8%e5%bc%82%e6%ad%a5%e5%8a%a0%e8%bd%bd">#</a>
+</h4>
+<p>解释：</p>
+<p>将 <code>script</code> 放在页面中间将阻断页面的渲染。出于性能方面的考虑，如非必要，请遵守此条建议。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- a lot of elements --&gt;</span>
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;init-behavior.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h4 id="建议-移动环境或只针对现代浏览器设计的-web-应用如果引用外部资源的-url-协议部分与页面相同建议省略协议前缀">
+  [建议] 移动环境或只针对现代浏览器设计的 Web 应用，如果引用外部资源的 <code>URL</code> 协议部分与页面相同，建议省略协议前缀。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%a7%bb%e5%8a%a8%e7%8e%af%e5%a2%83%e6%88%96%e5%8f%aa%e9%92%88%e5%af%b9%e7%8e%b0%e4%bb%a3%e6%b5%8f%e8%a7%88%e5%99%a8%e8%ae%be%e8%ae%a1%e7%9a%84-web-%e5%ba%94%e7%94%a8%e5%a6%82%e6%9e%9c%e5%bc%95%e7%94%a8%e5%a4%96%e9%83%a8%e8%b5%84%e6%ba%90%e7%9a%84-url-%e5%8d%8f%e8%ae%ae%e9%83%a8%e5%88%86%e4%b8%8e%e9%a1%b5%e9%9d%a2%e7%9b%b8%e5%90%8c%e5%bb%ba%e8%ae%ae%e7%9c%81%e7%95%a5%e5%8d%8f%e8%ae%ae%e5%89%8d%e7%bc%80">#</a>
+</h4>
+<p>解释：</p>
+<p>使用 <code>protocol-relative URL</code> 引入 CSS，在 <code>IE7/8</code> 下，会发两次请求。是否使用 <code>protocol-relative URL</code> 应充分考虑页面针对的环境。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//s1.bdstatic.com/cache/static/jquery-1.10.2.min_f2fb5194.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="4-head">
+  4 head
+  <a class="anchor" href="#4-head">#</a>
+</h2>
+<h3 id="41-title">
+  4.1 title
+  <a class="anchor" href="#41-title">#</a>
+</h3>
+<h4 id="强制-页面必须包含-title-标签声明标题">
+  [强制] 页面必须包含 <code>title</code> 标签声明标题。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e9%a1%b5%e9%9d%a2%e5%bf%85%e9%a1%bb%e5%8c%85%e5%90%ab-title-%e6%a0%87%e7%ad%be%e5%a3%b0%e6%98%8e%e6%a0%87%e9%a2%98">#</a>
+</h4>
+<h4 id="强制-title-必须作为-head-的直接子元素并紧随-charset-声明之后">
+  [强制] <code>title</code> 必须作为 <code>head</code> 的直接子元素，并紧随 <code>charset</code> 声明之后。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-title-%e5%bf%85%e9%a1%bb%e4%bd%9c%e4%b8%ba-head-%e7%9a%84%e7%9b%b4%e6%8e%a5%e5%ad%90%e5%85%83%e7%b4%a0%e5%b9%b6%e7%b4%a7%e9%9a%8f-charset-%e5%a3%b0%e6%98%8e%e4%b9%8b%e5%90%8e">#</a>
+</h4>
+<p>解释：</p>
+<p><code>title</code> 中如果包含 ASCII 之外的字符，浏览器需要知道字符编码类型才能进行解码，否则可能导致乱码。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;页面标题&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><h3 id="42-favicon">
+  4.2 favicon
+  <a class="anchor" href="#42-favicon">#</a>
+</h3>
+<h4 id="强制-保证-favicon-可访问">
+  [强制] 保证 <code>favicon</code> 可访问。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bf%9d%e8%af%81-favicon-%e5%8f%af%e8%ae%bf%e9%97%ae">#</a>
+</h4>
+<p>解释：</p>
+<p>在未指定 favicon 时，大多数浏览器会请求 Web Server 根目录下的 <code>favicon.ico</code> 。为了保证 favicon 可访问，避免 404，必须遵循以下两种方法之一：</p>
+<ol>
+<li>在 Web Server 根目录放置 <code>favicon.ico</code> 文件。</li>
+<li>使用 <code>link</code> 指定 favicon。</li>
+</ol>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path/to/favicon.ico&#34;</span> /&gt;
+</code></pre></div><h3 id="43-viewport">
+  4.3 viewport
+  <a class="anchor" href="#43-viewport">#</a>
+</h3>
+<h4 id="建议-若页面欲对移动设备友好需指定页面的-viewport">
+  [建议] 若页面欲对移动设备友好，需指定页面的 <code>viewport</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e8%8b%a5%e9%a1%b5%e9%9d%a2%e6%ac%b2%e5%af%b9%e7%a7%bb%e5%8a%a8%e8%ae%be%e5%a4%87%e5%8f%8b%e5%a5%bd%e9%9c%80%e6%8c%87%e5%ae%9a%e9%a1%b5%e9%9d%a2%e7%9a%84-viewport">#</a>
+</h4>
+<p>解释：</p>
+<p>viewport meta tag 可以设置可视区域的宽度和初始缩放大小，避免在移动设备上出现页面展示不正常。</p>
+<p>比如，在页面宽度小于 <code>980px</code> 时，若需 iOS 设备友好，应当设置 viewport 的 <code>width</code> 值来适应你的页面宽度。同时因为不同移动设备分辨率不同，在设置时，应当使用 <code>device-width</code> 和 <code>device-height</code> 变量。</p>
+<p>另外，为了使 viewport 正常工作，在页面内容样式布局设计上也要做相应调整，如避免绝对定位等。关于 viewport 的更多介绍，可以参见 <a href="https://developer.apple.com/library/mac/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html#//apple_ref/doc/uid/TP40006509-SW26">Safari Web Content Guide 的介绍</a></p>
+<h2 id="5-图片">
+  5 图片
+  <a class="anchor" href="#5-%e5%9b%be%e7%89%87">#</a>
+</h2>
+<h4 id="强制-禁止-img-的-src-取值为空延迟加载的图片也要增加默认的-src">
+  [强制] 禁止 <code>img</code> 的 <code>src</code> 取值为空。延迟加载的图片也要增加默认的 <code>src</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e7%a6%81%e6%ad%a2-img-%e7%9a%84-src-%e5%8f%96%e5%80%bc%e4%b8%ba%e7%a9%ba%e5%bb%b6%e8%bf%9f%e5%8a%a0%e8%bd%bd%e7%9a%84%e5%9b%be%e7%89%87%e4%b9%9f%e8%a6%81%e5%a2%9e%e5%8a%a0%e9%bb%98%e8%ae%a4%e7%9a%84-src">#</a>
+</h4>
+<p>解释：</p>
+<p><code>src</code> 取值为空，会导致部分浏览器重新加载一次当前页面，参考：<a href="https://developer.yahoo.com/performance/rules.html#emptysrc">https://developer.yahoo.com/performance/rules.html#emptysrc</a></p>
+<h4 id="建议-避免为-img-添加不必要的-title-属性">
+  [建议] 避免为 <code>img</code> 添加不必要的 <code>title</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e9%81%bf%e5%85%8d%e4%b8%ba-img-%e6%b7%bb%e5%8a%a0%e4%b8%8d%e5%bf%85%e8%a6%81%e7%9a%84-title-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>多余的 <code>title</code> 影响看图体验，并且增加了页面尺寸。</p>
+<h4 id="建议-为重要图片添加-alt-属性">
+  [建议] 为重要图片添加 <code>alt</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%b8%ba%e9%87%8d%e8%a6%81%e5%9b%be%e7%89%87%e6%b7%bb%e5%8a%a0-alt-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>可以提高图片加载失败时的用户体验。</p>
+<h4 id="建议-添加-width-和-height-属性以避免页面抖动">
+  [建议] 添加 <code>width</code> 和 <code>height</code> 属性，以避免页面抖动。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%b7%bb%e5%8a%a0-width-%e5%92%8c-height-%e5%b1%9e%e6%80%a7%e4%bb%a5%e9%81%bf%e5%85%8d%e9%a1%b5%e9%9d%a2%e6%8a%96%e5%8a%a8">#</a>
+</h4>
+<h4 id="建议-有下载需求的图片采用-img-标签实现无下载需求的图片采用-css-背景图实现">
+  [建议] 有下载需求的图片采用 <code>img</code> 标签实现，无下载需求的图片采用 CSS 背景图实现。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%9c%89%e4%b8%8b%e8%bd%bd%e9%9c%80%e6%b1%82%e7%9a%84%e5%9b%be%e7%89%87%e9%87%87%e7%94%a8-img-%e6%a0%87%e7%ad%be%e5%ae%9e%e7%8e%b0%e6%97%a0%e4%b8%8b%e8%bd%bd%e9%9c%80%e6%b1%82%e7%9a%84%e5%9b%be%e7%89%87%e9%87%87%e7%94%a8-css-%e8%83%8c%e6%99%af%e5%9b%be%e5%ae%9e%e7%8e%b0">#</a>
+</h4>
+<p>解释：</p>
+<ol>
+<li>产品 logo、用户头像、用户产生的图片等有潜在下载需求的图片，以 <code>img</code> 形式实现，能方便用户下载。</li>
+<li>无下载需求的图片，比如：icon、背景、代码使用的图片等，尽可能采用 CSS 背景图实现。</li>
+</ol>
+<h2 id="6-表单">
+  6 表单
+  <a class="anchor" href="#6-%e8%a1%a8%e5%8d%95">#</a>
+</h2>
+<h3 id="61-控件标题">
+  6.1 控件标题
+  <a class="anchor" href="#61-%e6%8e%a7%e4%bb%b6%e6%a0%87%e9%a2%98">#</a>
+</h3>
+<h4 id="强制-有文本标题的控件必须使用-label-标签将其与其标题相关联">
+  [强制] 有文本标题的控件必须使用 <code>label</code> 标签将其与其标题相关联。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e6%9c%89%e6%96%87%e6%9c%ac%e6%a0%87%e9%a2%98%e7%9a%84%e6%8e%a7%e4%bb%b6%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8-label-%e6%a0%87%e7%ad%be%e5%b0%86%e5%85%b6%e4%b8%8e%e5%85%b6%e6%a0%87%e9%a2%98%e7%9b%b8%e5%85%b3%e8%81%94">#</a>
+</h4>
+<p>解释：</p>
+<p>有两种方式：</p>
+<ol>
+<li>将控件置于 <code>label</code> 内。</li>
+<li><code>label</code> 的 <code>for</code> 属性指向控件的 <code>id</code>。</li>
+</ol>
+<p>推荐使用第一种，减少不必要的 <code>id</code>。如果 DOM 结构不允许直接嵌套，则应使用第二种。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">label</span>
+  &gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;confirm&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;on&#34;</span> /&gt; 我已确认上述条款&lt;/<span style="color:#f92672">label</span>
+&gt;
+
+&lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span>&gt;用户名：&lt;/<span style="color:#f92672">label</span>&gt;
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;textbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> /&gt;
+</code></pre></div><h3 id="62-按钮">
+  6.2 按钮
+  <a class="anchor" href="#62-%e6%8c%89%e9%92%ae">#</a>
+</h3>
+<h4 id="强制-使用-button-元素时必须指明-type-属性值">
+  [强制] 使用 <code>button</code> 元素时必须指明 <code>type</code> 属性值。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-button-%e5%85%83%e7%b4%a0%e6%97%b6%e5%bf%85%e9%a1%bb%e6%8c%87%e6%98%8e-type-%e5%b1%9e%e6%80%a7%e5%80%bc">#</a>
+</h4>
+<p>解释：</p>
+<p><code>button</code> 元素的默认 <code>type</code> 为 <code>submit</code>，如果被置于 <code>form</code> 元素中，点击后将导致表单提交。为显示区分其作用方便理解，必须给出 <code>type</code> 属性。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;提交&lt;/<span style="color:#f92672">button</span>&gt; &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span>&gt;取消&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><h4 id="建议-尽量不要使用按钮类元素的-name-属性">
+  [建议] 尽量不要使用按钮类元素的 <code>name</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%b0%bd%e9%87%8f%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8%e6%8c%89%e9%92%ae%e7%b1%bb%e5%85%83%e7%b4%a0%e7%9a%84-name-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>由于浏览器兼容性问题，使用按钮的 <code>name</code> 属性会带来许多难以发现的问题。具体情况可参考<a href="http://w3help.org/zh-cn/causes/CM2001">此文</a>。</p>
+<h3 id="63-可访问性-a11y">
+  6.3 可访问性 (A11Y)
+  <a class="anchor" href="#63-%e5%8f%af%e8%ae%bf%e9%97%ae%e6%80%a7-a11y">#</a>
+</h3>
+<h4 id="建议-负责主要功能的按钮在-dom-中的顺序应靠前">
+  [建议] 负责主要功能的按钮在 DOM 中的顺序应靠前。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e8%b4%9f%e8%b4%a3%e4%b8%bb%e8%a6%81%e5%8a%9f%e8%83%bd%e7%9a%84%e6%8c%89%e9%92%ae%e5%9c%a8-dom-%e4%b8%ad%e7%9a%84%e9%a1%ba%e5%ba%8f%e5%ba%94%e9%9d%a0%e5%89%8d">#</a>
+</h4>
+<p>解释：</p>
+<p>负责主要功能的按钮应相对靠前，以提高可访问性。如果在 CSS 中指定了 <code>float: right</code> 则可能导致视觉上主按钮在前，而 DOM 中主按钮靠后的情况。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">style</span>&gt;
+  .<span style="color:#a6e22e">buttons</span> .<span style="color:#a6e22e">button-group</span> {
+    <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;
+  }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buttons&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button-group&#34;</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;提交&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span>&gt;取消&lt;/<span style="color:#f92672">button</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">style</span>&gt;
+  .<span style="color:#a6e22e">buttons</span> <span style="color:#f92672">button</span> {
+    <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">right</span>;
+  }
+&lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;buttons&#34;</span>&gt;
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span>&gt;取消&lt;/<span style="color:#f92672">button</span>&gt;
+  &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;提交&lt;/<span style="color:#f92672">button</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h4 id="建议-当使用-javascript-进行表单提交时如果条件允许应使原生提交功能正常工作">
+  [建议] 当使用 JavaScript 进行表单提交时，如果条件允许，应使原生提交功能正常工作。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%bd%93%e4%bd%bf%e7%94%a8-javascript-%e8%bf%9b%e8%a1%8c%e8%a1%a8%e5%8d%95%e6%8f%90%e4%ba%a4%e6%97%b6%e5%a6%82%e6%9e%9c%e6%9d%a1%e4%bb%b6%e5%85%81%e8%ae%b8%e5%ba%94%e4%bd%bf%e5%8e%9f%e7%94%9f%e6%8f%90%e4%ba%a4%e5%8a%9f%e8%83%bd%e6%ad%a3%e5%b8%b8%e5%b7%a5%e4%bd%9c">#</a>
+</h4>
+<p>解释：</p>
+<p>当浏览器 JS 运行错误或关闭 JS 时，提交功能将无法工作。如果正确指定了 <code>form</code> 元素的 <code>action</code> 属性和表单控件的 <code>name</code> 属性时，提交仍可继续进行。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/login&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;用户名&#34;</span> /&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+  &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">placeholder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;密码&#34;</span> /&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+</code></pre></div><h4 id="建议-在针对移动设备开发的页面时根据内容类型指定输入框的-type-属性">
+  [建议] 在针对移动设备开发的页面时，根据内容类型指定输入框的 <code>type</code> 属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8%e9%92%88%e5%af%b9%e7%a7%bb%e5%8a%a8%e8%ae%be%e5%a4%87%e5%bc%80%e5%8f%91%e7%9a%84%e9%a1%b5%e9%9d%a2%e6%97%b6%e6%a0%b9%e6%8d%ae%e5%86%85%e5%ae%b9%e7%b1%bb%e5%9e%8b%e6%8c%87%e5%ae%9a%e8%be%93%e5%85%a5%e6%a1%86%e7%9a%84-type-%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>根据内容类型指定输入框类型，能获得能友好的输入体验。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span> /&gt;
+</code></pre></div><h2 id="7-多媒体">
+  7 多媒体
+  <a class="anchor" href="#7-%e5%a4%9a%e5%aa%92%e4%bd%93">#</a>
+</h2>
+<h4 id="建议-当在现代浏览器中使用-audio-以及-video-标签来播放音频视频时应当注意格式">
+  [建议] 当在现代浏览器中使用 <code>audio</code> 以及 <code>video</code> 标签来播放音频、视频时，应当注意格式。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%bd%93%e5%9c%a8%e7%8e%b0%e4%bb%a3%e6%b5%8f%e8%a7%88%e5%99%a8%e4%b8%ad%e4%bd%bf%e7%94%a8-audio-%e4%bb%a5%e5%8f%8a-video-%e6%a0%87%e7%ad%be%e6%9d%a5%e6%92%ad%e6%94%be%e9%9f%b3%e9%a2%91%e8%a7%86%e9%a2%91%e6%97%b6%e5%ba%94%e5%bd%93%e6%b3%a8%e6%84%8f%e6%a0%bc%e5%bc%8f">#</a>
+</h4>
+<p>解释：</p>
+<p>音频应尽可能覆盖到如下格式：</p>
+<ul>
+<li>MP3</li>
+<li>WAV</li>
+<li>Ogg</li>
+</ul>
+<p>视频应尽可能覆盖到如下格式：</p>
+<ul>
+<li>MP4</li>
+<li>WebM</li>
+<li>Ogg</li>
+</ul>
+<h4 id="建议-在支持-html5-的浏览器中优先使用-audio-和-video-标签来定义音视频元素">
+  [建议] 在支持 <code>HTML5</code> 的浏览器中优先使用 <code>audio</code> 和 <code>video</code> 标签来定义音视频元素。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8%e6%94%af%e6%8c%81-html5-%e7%9a%84%e6%b5%8f%e8%a7%88%e5%99%a8%e4%b8%ad%e4%bc%98%e5%85%88%e4%bd%bf%e7%94%a8-audio-%e5%92%8c-video-%e6%a0%87%e7%ad%be%e6%9d%a5%e5%ae%9a%e4%b9%89%e9%9f%b3%e8%a7%86%e9%a2%91%e5%85%83%e7%b4%a0">#</a>
+</h4>
+<h4 id="建议-使用退化到插件的方式来对多浏览器进行支持">
+  [建议] 使用退化到插件的方式来对多浏览器进行支持。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8%e9%80%80%e5%8c%96%e5%88%b0%e6%8f%92%e4%bb%b6%e7%9a%84%e6%96%b9%e5%bc%8f%e6%9d%a5%e5%af%b9%e5%a4%9a%e6%b5%8f%e8%a7%88%e5%99%a8%e8%bf%9b%e8%a1%8c%e6%94%af%e6%8c%81">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">controls</span>&gt;
+  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio.mp3&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/mpeg&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio.ogg&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/ogg&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">object</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio.mp3&#34;</span>&gt;
+    &lt;<span style="color:#f92672">embed</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio.swf&#34;</span> /&gt;
+  &lt;/<span style="color:#f92672">object</span>&gt;
+&lt;/<span style="color:#f92672">audio</span>&gt;
+
+&lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">controls</span>&gt;
+  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video.mp4&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/mp4&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video.ogg&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/ogg&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">object</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video.mp4&#34;</span>&gt;
+    &lt;<span style="color:#f92672">embed</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video.swf&#34;</span> /&gt;
+  &lt;/<span style="color:#f92672">object</span>&gt;
+&lt;/<span style="color:#f92672">video</span>&gt;
+</code></pre></div><h4 id="建议-只在必要的时候开启音视频的自动播放">
+  [建议] 只在必要的时候开启音视频的自动播放。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%8f%aa%e5%9c%a8%e5%bf%85%e8%a6%81%e7%9a%84%e6%97%b6%e5%80%99%e5%bc%80%e5%90%af%e9%9f%b3%e8%a7%86%e9%a2%91%e7%9a%84%e8%87%aa%e5%8a%a8%e6%92%ad%e6%94%be">#</a>
+</h4>
+<h4 id="建议-在-object-标签内部提供指示浏览器不支持该标签的说明">
+  [建议] 在 <code>object</code> 标签内部提供指示浏览器不支持该标签的说明。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8-object-%e6%a0%87%e7%ad%be%e5%86%85%e9%83%a8%e6%8f%90%e4%be%9b%e6%8c%87%e7%a4%ba%e6%b5%8f%e8%a7%88%e5%99%a8%e4%b8%8d%e6%94%af%e6%8c%81%e8%af%a5%e6%a0%87%e7%ad%be%e7%9a%84%e8%af%b4%e6%98%8e">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">object</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;50&#34;</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;something.swf&#34;</span>
+  &gt;DO NOT SUPPORT THIS TAG&lt;/<span style="color:#f92672">object</span>
+&gt;
+</code></pre></div><h2 id="8-模板中的-html">
+  8 模板中的 HTML
+  <a class="anchor" href="#8-%e6%a8%a1%e6%9d%bf%e4%b8%ad%e7%9a%84-html">#</a>
+</h2>
+<h4 id="建议-模板代码的缩进优先保证-html-代码的缩进规则">
+  [建议] 模板代码的缩进优先保证 HTML 代码的缩进规则。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%a0%81%e7%9a%84%e7%bc%a9%e8%bf%9b%e4%bc%98%e5%85%88%e4%bf%9d%e8%af%81-html-%e4%bb%a3%e7%a0%81%e7%9a%84%e7%bc%a9%e8%bf%9b%e8%a7%84%e5%88%99">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+{if $display == true}
+&lt;<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">ul</span>&gt;
+    {foreach $item_list as $item}
+    &lt;<span style="color:#f92672">li</span>&gt;{$item.name}&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;
+      {/foreach}
+    &lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+{/if}
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+{if $display == true}
+&lt;<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">ul</span>&gt;
+    {foreach $item_list as $item}
+    &lt;<span style="color:#f92672">li</span>&gt;{$item.name}&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;
+      {/foreach}
+    &lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;/<span style="color:#f92672">ul</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+{/if}
+</code></pre></div><h4 id="建议-模板代码应以保证-html-单个标签语法的正确性为基本原则">
+  [建议] 模板代码应以保证 HTML 单个标签语法的正确性为基本原则。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%a8%a1%e6%9d%bf%e4%bb%a3%e7%a0%81%e5%ba%94%e4%bb%a5%e4%bf%9d%e8%af%81-html-%e5%8d%95%e4%b8%aa%e6%a0%87%e7%ad%be%e8%af%ad%e6%b3%95%e7%9a%84%e6%ad%a3%e7%a1%ae%e6%80%a7%e4%b8%ba%e5%9f%ba%e6%9c%ac%e5%8e%9f%e5%88%99">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{if $item.type_id == $current_type}focus{/if}&#34;</span>&gt;{ $item.type_name }&lt;/<span style="color:#f92672">li</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">li</span> <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#a6e22e">if</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">item</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">type_id </span><span style="color:#f92672">=</span><span style="color:#e6db74">=</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">current_type</span><span style="color:#960050;background-color:#1e0010">}</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;focus&#34;</span><span style="color:#960050;background-color:#1e0010">{/</span><span style="color:#a6e22e">if</span><span style="color:#960050;background-color:#1e0010">}</span>&gt;{ $item.type_name }&lt;/<span style="color:#f92672">li</span>&gt;
+</code></pre></div><h4 id="建议-在循环处理模板数据构造表格时若要求每行输出固定的个数建议先将数据分组之后再循环输出">
+  [建议] 在循环处理模板数据构造表格时，若要求每行输出固定的个数，建议先将数据分组，之后再循环输出。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%9c%a8%e5%be%aa%e7%8e%af%e5%a4%84%e7%90%86%e6%a8%a1%e6%9d%bf%e6%95%b0%e6%8d%ae%e6%9e%84%e9%80%a0%e8%a1%a8%e6%a0%bc%e6%97%b6%e8%8b%a5%e8%a6%81%e6%b1%82%e6%af%8f%e8%a1%8c%e8%be%93%e5%87%ba%e5%9b%ba%e5%ae%9a%e7%9a%84%e4%b8%aa%e6%95%b0%e5%bb%ba%e8%ae%ae%e5%85%88%e5%b0%86%e6%95%b0%e6%8d%ae%e5%88%86%e7%bb%84%e4%b9%8b%e5%90%8e%e5%86%8d%e5%be%aa%e7%8e%af%e8%be%93%e5%87%ba">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">table</span>&gt;
+  {foreach $item_list as $item_group}
+  &lt;<span style="color:#f92672">tr</span>&gt;
+    {foreach $item_group as $item}
+    &lt;<span style="color:#f92672">td</span>&gt;{ $item.name }&lt;/<span style="color:#f92672">td</span>&gt;
+    {/foreach}
+  &lt;/<span style="color:#f92672">tr</span>&gt;
+
+  &lt;<span style="color:#f92672">tr</span>&gt;
+    {/foreach}
+  &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">table</span>&gt;
+  &lt;<span style="color:#f92672">tr</span>&gt;
+    {foreach $item_list as $item}
+    &lt;<span style="color:#f92672">td</span>&gt;{ $item.name }&lt;/<span style="color:#f92672">td</span>&gt;
+    {if $item@iteration is div by 5}
+  &lt;/<span style="color:#f92672">tr</span>&gt;
+  &lt;<span style="color:#f92672">tr</span>&gt;
+    {/if} {/foreach}
+  &lt;/<span style="color:#f92672">tr</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><h3 id="建议-新窗口标签页打开的链接需要按业务需要添加安全相关的-rel-属性值-noopener">
+  [建议] 新窗口/标签页打开的链接需要按业务需要添加安全相关的 <code>rel</code> 属性值 <code>noopener</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%96%b0%e7%aa%97%e5%8f%a3%e6%a0%87%e7%ad%be%e9%a1%b5%e6%89%93%e5%bc%80%e7%9a%84%e9%93%be%e6%8e%a5%e9%9c%80%e8%a6%81%e6%8c%89%e4%b8%9a%e5%8a%a1%e9%9c%80%e8%a6%81%e6%b7%bb%e5%8a%a0%e5%ae%89%e5%85%a8%e7%9b%b8%e5%85%b3%e7%9a%84-rel-%e5%b1%9e%e6%80%a7%e5%80%bc-noopener">#</a>
+</h3>
+<p>解释：</p>
+<p>新窗口/标签页打开的网页可以通过 <code>window.opener</code> 访问原网页的上下文，会引入安全问题。例如从搜索结果页打开的网页可以通过 <code>window.opener</code> 将结果页篡改为钓鱼网页，用户返回时将访问恶意网页内容。详见 <a href="https://www.w3.org/TR/html/links.html#link-type-noopener">4.8.6.8. Link type &ldquo;noopener&rdquo; - HTML 5.2</a>。</p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- good --&gt;</span>
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//external.website/&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span>&gt;外部链接&lt;/<span style="color:#f92672">a</span>&gt;
+
+<span style="color:#75715e">&lt;!-- bad --&gt;</span>
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;//external.website/&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;外部链接&lt;/<span style="color:#f92672">a</span>&gt;
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/note"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-前言">1 前言</a></li>
+    <li><a href="#2-代码风格">2 代码风格</a>
+      <ul>
+        <li><a href="#21-缩进与换行">2.1 缩进与换行</a>
+          <ul>
+            <li><a href="#强制-使用-4-个空格做为一个缩进层级不允许使用-2-个空格-或-tab-字符">[强制] 使用 <code>4</code> 个空格做为一个缩进层级，不允许使用 <code>2</code> 个空格 或 <code>tab</code> 字符。</a></li>
+            <li><a href="#建议-每行不得超过-120-个字符">[建议] 每行不得超过 <code>120</code> 个字符。</a></li>
+          </ul>
+        </li>
+        <li><a href="#22-命名">2.2 命名</a>
+          <ul>
+            <li><a href="#强制-class-必须单词全字母小写单词间以---分隔">[强制] <code>class</code> 必须单词全字母小写，单词间以 <code>-</code> 分隔。</a></li>
+            <li><a href="#强制-class-必须代表相应模块或部件的内容或功能不得以样式信息进行命名">[强制] <code>class</code> 必须代表相应模块或部件的内容或功能，不得以样式信息进行命名。</a></li>
+            <li><a href="#强制-元素-id-必须保证页面唯一">[强制] 元素 <code>id</code> 必须保证页面唯一。</a></li>
+            <li><a href="#建议-id-建议单词全字母小写单词间以---分隔同项目必须保持风格一致">[建议] <code>id</code> 建议单词全字母小写，单词间以 <code>-</code> 分隔。同项目必须保持风格一致。</a></li>
+            <li><a href="#建议-idclass-命名在避免冲突并描述清楚的前提下尽可能短">[建议] <code>id</code>、<code>class</code> 命名，在避免冲突并描述清楚的前提下尽可能短。</a></li>
+            <li><a href="#强制-禁止为了-hook-脚本创建无样式信息的-class">[强制] 禁止为了 <code>hook 脚本</code>，创建无样式信息的 <code>class</code>。</a></li>
+            <li><a href="#强制-同一页面应避免使用相同的-name-与-id">[强制] 同一页面，应避免使用相同的 <code>name</code> 与 <code>id</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#23-标签">2.3 标签</a>
+          <ul>
+            <li><a href="#强制-标签名必须使用小写字母">[强制] 标签名必须使用小写字母。</a></li>
+            <li><a href="#强制-对于无需自闭合的标签不允许自闭合">[强制] 对于无需自闭合的标签，不允许自闭合。</a></li>
+            <li><a href="#强制-对-html5-中规定允许省略的闭合标签不允许省略闭合标签">[强制] 对 <code>HTML5</code> 中规定允许省略的闭合标签，不允许省略闭合标签。</a></li>
+            <li><a href="#强制-标签使用必须符合标签嵌套规则">[强制] 标签使用必须符合标签嵌套规则。</a></li>
+            <li><a href="#建议-html-标签的使用应该遵循标签的语义">[建议] HTML 标签的使用应该遵循标签的语义。</a></li>
+            <li><a href="#建议-在-css-可以实现相同需求的情况下不得使用表格进行布局">[建议] 在 CSS 可以实现相同需求的情况下不得使用表格进行布局。</a></li>
+            <li><a href="#建议-标签的使用应尽量简洁减少不必要的标签">[建议] 标签的使用应尽量简洁，减少不必要的标签。</a></li>
+          </ul>
+        </li>
+        <li><a href="#24-属性">2.4 属性</a>
+          <ul>
+            <li><a href="#强制-属性名必须使用小写字母">[强制] 属性名必须使用小写字母。</a></li>
+            <li><a href="#强制-属性值必须用双引号包围">[强制] 属性值必须用双引号包围。</a></li>
+            <li><a href="#强制-属性名与属性值中间不得存在空格">[强制] 属性名与属性值中间不得存在空格。</a></li>
+            <li><a href="#建议-布尔类型的属性建议不添加属性值">[建议] 布尔类型的属性，建议不添加属性值。</a></li>
+            <li><a href="#建议-自定义属性建议以-xxx--为前缀推荐使用-data-">[建议] 自定义属性建议以 <code>xxx-</code> 为前缀，推荐使用 <code>data-</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-通用">3 通用</a>
+      <ul>
+        <li><a href="#31-doctype">3.1 DOCTYPE</a>
+          <ul>
+            <li><a href="#强制-使用-html5-的-doctype-来启用标准模式建议使用大写的-doctype">[强制] 使用 <code>HTML5</code> 的 <code>doctype</code> 来启用标准模式，建议使用大写的 <code>DOCTYPE</code>。</a></li>
+            <li><a href="#建议-启用-ie-edge-模式">[建议] 启用 IE Edge 模式。</a></li>
+            <li><a href="#建议-在-html-标签上设置正确的-lang-属性">[建议] 在 <code>html</code> 标签上设置正确的 <code>lang</code> 属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-编码">3.2 编码</a>
+          <ul>
+            <li><a href="#强制-页面必须使用精简形式明确指定字符编码指定字符编码的-meta-必须是-head-的第一个直接子元素">[强制] 页面必须使用精简形式，明确指定字符编码。指定字符编码的 <code>meta</code> 必须是 <code>head</code> 的第一个直接子元素。</a></li>
+            <li><a href="#建议-html-文件使用无-bom-的-utf-8-编码">[建议] <code>HTML</code> 文件使用无 <code>BOM</code> 的 <code>UTF-8</code> 编码。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-css-和-javascript-引入">3.3 CSS 和 JavaScript 引入</a>
+          <ul>
+            <li><a href="#强制-引入-css-时必须指明-relstylesheet">[强制] 引入 <code>CSS</code> 时必须指明 <code>rel=&quot;stylesheet&quot;</code>。</a></li>
+            <li><a href="#建议-引入-css-和-javascript-时无须指明-type-属性">[建议] 引入 <code>CSS</code> 和 <code>JavaScript</code> 时无须指明 <code>type</code> 属性。</a></li>
+            <li><a href="#建议-展现定义放置于外部-css-中行为定义放置于外部-javascript-中">[建议] 展现定义放置于外部 <code>CSS</code> 中，行为定义放置于外部 <code>JavaScript</code> 中。</a></li>
+            <li><a href="#建议-在-head-中引入页面需要的所有-css-资源">[建议] 在 <code>head</code> 中引入页面需要的所有 <code>CSS</code> 资源。</a></li>
+            <li><a href="#建议-javascript-应当放在页面末尾或采用异步加载">[建议] <code>JavaScript</code> 应当放在页面末尾，或采用异步加载。</a></li>
+            <li><a href="#建议-移动环境或只针对现代浏览器设计的-web-应用如果引用外部资源的-url-协议部分与页面相同建议省略协议前缀">[建议] 移动环境或只针对现代浏览器设计的 Web 应用，如果引用外部资源的 <code>URL</code> 协议部分与页面相同，建议省略协议前缀。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-head">4 head</a>
+      <ul>
+        <li><a href="#41-title">4.1 title</a>
+          <ul>
+            <li><a href="#强制-页面必须包含-title-标签声明标题">[强制] 页面必须包含 <code>title</code> 标签声明标题。</a></li>
+            <li><a href="#强制-title-必须作为-head-的直接子元素并紧随-charset-声明之后">[强制] <code>title</code> 必须作为 <code>head</code> 的直接子元素，并紧随 <code>charset</code> 声明之后。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-favicon">4.2 favicon</a>
+          <ul>
+            <li><a href="#强制-保证-favicon-可访问">[强制] 保证 <code>favicon</code> 可访问。</a></li>
+          </ul>
+        </li>
+        <li><a href="#43-viewport">4.3 viewport</a>
+          <ul>
+            <li><a href="#建议-若页面欲对移动设备友好需指定页面的-viewport">[建议] 若页面欲对移动设备友好，需指定页面的 <code>viewport</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#5-图片">5 图片</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#强制-禁止-img-的-src-取值为空延迟加载的图片也要增加默认的-src">[强制] 禁止 <code>img</code> 的 <code>src</code> 取值为空。延迟加载的图片也要增加默认的 <code>src</code>。</a></li>
+            <li><a href="#建议-避免为-img-添加不必要的-title-属性">[建议] 避免为 <code>img</code> 添加不必要的 <code>title</code> 属性。</a></li>
+            <li><a href="#建议-为重要图片添加-alt-属性">[建议] 为重要图片添加 <code>alt</code> 属性。</a></li>
+            <li><a href="#建议-添加-width-和-height-属性以避免页面抖动">[建议] 添加 <code>width</code> 和 <code>height</code> 属性，以避免页面抖动。</a></li>
+            <li><a href="#建议-有下载需求的图片采用-img-标签实现无下载需求的图片采用-css-背景图实现">[建议] 有下载需求的图片采用 <code>img</code> 标签实现，无下载需求的图片采用 CSS 背景图实现。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#6-表单">6 表单</a>
+      <ul>
+        <li><a href="#61-控件标题">6.1 控件标题</a>
+          <ul>
+            <li><a href="#强制-有文本标题的控件必须使用-label-标签将其与其标题相关联">[强制] 有文本标题的控件必须使用 <code>label</code> 标签将其与其标题相关联。</a></li>
+          </ul>
+        </li>
+        <li><a href="#62-按钮">6.2 按钮</a>
+          <ul>
+            <li><a href="#强制-使用-button-元素时必须指明-type-属性值">[强制] 使用 <code>button</code> 元素时必须指明 <code>type</code> 属性值。</a></li>
+            <li><a href="#建议-尽量不要使用按钮类元素的-name-属性">[建议] 尽量不要使用按钮类元素的 <code>name</code> 属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-可访问性-a11y">6.3 可访问性 (A11Y)</a>
+          <ul>
+            <li><a href="#建议-负责主要功能的按钮在-dom-中的顺序应靠前">[建议] 负责主要功能的按钮在 DOM 中的顺序应靠前。</a></li>
+            <li><a href="#建议-当使用-javascript-进行表单提交时如果条件允许应使原生提交功能正常工作">[建议] 当使用 JavaScript 进行表单提交时，如果条件允许，应使原生提交功能正常工作。</a></li>
+            <li><a href="#建议-在针对移动设备开发的页面时根据内容类型指定输入框的-type-属性">[建议] 在针对移动设备开发的页面时，根据内容类型指定输入框的 <code>type</code> 属性。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#7-多媒体">7 多媒体</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#建议-当在现代浏览器中使用-audio-以及-video-标签来播放音频视频时应当注意格式">[建议] 当在现代浏览器中使用 <code>audio</code> 以及 <code>video</code> 标签来播放音频、视频时，应当注意格式。</a></li>
+            <li><a href="#建议-在支持-html5-的浏览器中优先使用-audio-和-video-标签来定义音视频元素">[建议] 在支持 <code>HTML5</code> 的浏览器中优先使用 <code>audio</code> 和 <code>video</code> 标签来定义音视频元素。</a></li>
+            <li><a href="#建议-使用退化到插件的方式来对多浏览器进行支持">[建议] 使用退化到插件的方式来对多浏览器进行支持。</a></li>
+            <li><a href="#建议-只在必要的时候开启音视频的自动播放">[建议] 只在必要的时候开启音视频的自动播放。</a></li>
+            <li><a href="#建议-在-object-标签内部提供指示浏览器不支持该标签的说明">[建议] 在 <code>object</code> 标签内部提供指示浏览器不支持该标签的说明。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#8-模板中的-html">8 模板中的 HTML</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#建议-模板代码的缩进优先保证-html-代码的缩进规则">[建议] 模板代码的缩进优先保证 HTML 代码的缩进规则。</a></li>
+            <li><a href="#建议-模板代码应以保证-html-单个标签语法的正确性为基本原则">[建议] 模板代码应以保证 HTML 单个标签语法的正确性为基本原则。</a></li>
+            <li><a href="#建议-在循环处理模板数据构造表格时若要求每行输出固定的个数建议先将数据分组之后再循环输出">[建议] 在循环处理模板数据构造表格时，若要求每行输出固定的个数，建议先将数据分组，之后再循环输出。</a></li>
+          </ul>
+        </li>
+        <li><a href="#建议-新窗口标签页打开的链接需要按业务需要添加安全相关的-rel-属性值-noopener">[建议] 新窗口/标签页打开的链接需要按业务需要添加安全相关的 <code>rel</code> 属性值 <code>noopener</code>。</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<a href="https://github.com/ikingye/note"
+class="github-corner" aria-label="View source on GitHub">
+<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+  <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+  <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+  <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+</svg></a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
