@@ -1,6 +1,6 @@
 {
-  "name": "叶王笔记",
-  "short_name": "叶王笔记",
+  "name": "JavaScript 学习笔记",
+  "short_name": "JavaScript 学习笔记",
   "start_url": "/study-javascript/",
   "scope": "/study-javascript/",
   "display": "standalone",
