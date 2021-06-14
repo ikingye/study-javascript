@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta name="generator" content="Hugo 0.71.0" />
+  <meta name="generator" content="Hugo 0.83.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TypeScript 编码规范 #  1 前言
@@ -47,13 +47,15 @@
 任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
 2 代码风格 #  2.1 环境 #  [强制] TypeScript 文件使用 .ts 扩展名。含 JSX 语法的 TypeScript 文件使用 ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/" />
-<meta property="article:modified_time" content="2020-08-04T23:47:37+08:00" />
+<meta property="og:url" content="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2020-08-04T23:47:37&#43;08:00" />
+
 <title>Typescript | JavaScript 学习笔记</title>
 <link rel="manifest" href="/study-javascript/manifest.json">
 <link rel="icon" href="/study-javascript/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/study-javascript/book.min.47e4577a72cc9340ba815ebf8200a2e1642b6e7a28caf0622c921ba9d7c4478e.css" integrity="sha256-R&#43;RXenLMk0C6gV6/ggCi4WQrbnooyvBiLJIbqdfER44=">
-<script defer src="/study-javascript/en.search.min.ed8a900825aa5722c08c64c79192e2895d77a0f3dc35d39b2c827b64aa6d530f.js" integrity="sha256-7YqQCCWqVyLAjGTHkZLiiV13oPPcNdObLIJ7ZKptUw8="></script>
+<link rel="stylesheet" href="/study-javascript/book.min.e7360c502a84143addd190981586c3e3e8f082b67f6799dc9f237a599fe0be5a.css" integrity="sha256-5zYMUCqEFDrd0ZCYFYbD4&#43;jwgrZ/Z5ncnyN6WZ/gvlo=">
+<script defer src="/study-javascript/en.search.min.f6a43e518834121adb819d1ea738ed0488477fd8d2ef2e94e3cecb21a91ec2ef.js" integrity="sha256-9qQ&#43;UYg0EhrbgZ0epzjtBIhHf9jS7y6U487LIakewu8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -211,7 +213,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/" class="">Html</a>
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/" class="">HTML</a>
   
 
         </li>
@@ -472,7 +474,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -706,10 +708,10 @@ https://github.com/alex-shpak/hugo-book
 </h5>
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
 
 <span style="color:#75715e">// bad
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">React</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
 </code></pre></div>[建议] 使用 <h5 id="建议-使用-vs-codehttpscodevisualstudiocom-编写-typescript">
   <a href="https://code.visualstudio.com/"><code>VS Code</code></a> 编写 TypeScript。
   <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-vs-codehttpscodevisualstudiocom-%e7%bc%96%e5%86%99-typescript">#</a>
@@ -758,7 +760,7 @@ https://github.com/alex-shpak/hugo-book
   <span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>}
 
-<span style="color:#a6e22e">type</span> <span style="color:#a6e22e">HeaderProps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">HeaderStateProps</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">HeaderDispatchProps</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">HeaderProps</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">HeaderStateProps</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">HeaderDispatchProps</span>;
 </code></pre></div><h2 id="3-语言特性">
   3 语言特性
   <a class="anchor" href="#3-%e8%af%ad%e8%a8%80%e7%89%b9%e6%80%a7">#</a>
@@ -935,7 +937,7 @@ https://github.com/alex-shpak/hugo-book
 </h5>
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">item</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">items</span>) {
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">item</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">items</span>) {
   <span style="color:#75715e">// ...
 </span><span style="color:#75715e"></span>}
 
@@ -973,7 +975,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> [...document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.foo&#34;</span>)];
 
 <span style="color:#75715e">// bad
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.foo&#34;</span>));
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> Array.<span style="color:#66d9ef">from</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.foo&#34;</span>));
 
 <span style="color:#75715e">// worst
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">slice</span>.<span style="color:#a6e22e">call</span>(document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.foo&#34;</span>));
@@ -1036,7 +1038,7 @@ https://github.com/alex-shpak/hugo-book
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Button</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">PureComponent</span>&lt;<span style="color:#f92672">ButtonProps</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">ButtonState</span>&gt; {
-  <span style="color:#a6e22e">readonly</span> <span style="color:#a6e22e">state</span>: <span style="color:#66d9ef">ButtonState</span> <span style="color:#f92672">=</span> {
+  <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">state</span>: <span style="color:#66d9ef">ButtonState</span> <span style="color:#f92672">=</span> {
     <span style="color:#a6e22e">clicked</span>: <span style="color:#66d9ef">false</span>
   };
 
@@ -1068,12 +1070,12 @@ https://github.com/alex-shpak/hugo-book
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppComponent</span> {
-  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#a6e22e">readonly</span> <span style="color:#a6e22e">heroService</span>: <span style="color:#66d9ef">HeroService</span>) {}
+  <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">heroService</span>: <span style="color:#66d9ef">HeroService</span>) {}
 }
 
 <span style="color:#75715e">// bad
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppComponent</span> {
-  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">readonly</span> <span style="color:#a6e22e">heroService</span>: <span style="color:#66d9ef">HeroService</span>;
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">heroService</span>: <span style="color:#66d9ef">HeroService</span>;
 
   <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">heroService</span>: <span style="color:#66d9ef">HeroService</span>) {
     <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">heroService</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">heroService</span>;
@@ -1097,21 +1099,21 @@ https://github.com/alex-shpak/hugo-book
 </h5>
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">foo</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;foo&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">foo</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;foo&#34;</span>;
 
 <span style="color:#75715e">// bad
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;foo&#34;</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#34;foo&#34;</span>);
 </code></pre></div><h5 id="强制-对于同一个模块路径仅-import-一次">
   [强制] 对于同一个模块路径，仅 <code>import</code> 一次。
   <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%af%b9%e4%ba%8e%e5%90%8c%e4%b8%80%e4%b8%aa%e6%a8%a1%e5%9d%97%e8%b7%af%e5%be%84%e4%bb%85-import-%e4%b8%80%e6%ac%a1">#</a>
 </h5>
 <p>示例：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// good
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
 
 <span style="color:#75715e">// bad
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">PureComponent</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
 </code></pre></div><h5 id="建议-对于使用-webpack-等构建工具的项目在模块中引入其他资源如样式图片等时为资源编写类型声明文件或使用合适的-loader-生成类型声明文件">
   [建议] 对于使用 <code>webpack</code> 等构建工具的项目，在模块中引入其他资源（如样式、图片等）时，为资源编写类型声明文件，或使用合适的 <code>loader</code> 生成类型声明文件。
   <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%af%b9%e4%ba%8e%e4%bd%bf%e7%94%a8-webpack-%e7%ad%89%e6%9e%84%e5%bb%ba%e5%b7%a5%e5%85%b7%e7%9a%84%e9%a1%b9%e7%9b%ae%e5%9c%a8%e6%a8%a1%e5%9d%97%e4%b8%ad%e5%bc%95%e5%85%a5%e5%85%b6%e4%bb%96%e8%b5%84%e6%ba%90%e5%a6%82%e6%a0%b7%e5%bc%8f%e5%9b%be%e7%89%87%e7%ad%89%e6%97%b6%e4%b8%ba%e8%b5%84%e6%ba%90%e7%bc%96%e5%86%99%e7%b1%bb%e5%9e%8b%e5%a3%b0%e6%98%8e%e6%96%87%e4%bb%b6%e6%88%96%e4%bd%bf%e7%94%a8%e5%90%88%e9%80%82%e7%9a%84-loader-%e7%94%9f%e6%88%90%e7%b1%bb%e5%9e%8b%e5%a3%b0%e6%98%8e%e6%96%87%e4%bb%b6">#</a>
@@ -1128,13 +1130,13 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">logo</span>;
 
 <span style="color:#75715e">// Button.tsx
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">styles</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./Button.scss&#39;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">logo</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./logo.png&#39;</span>;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">styles</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./Button.scss&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">logo</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./logo.png&#39;</span>;
 
 
 <span style="color:#75715e">// bad
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>&lt;<span style="color:#f92672">any</span>&gt;(<span style="color:#e6db74">&#39;./Button.scss&#39;</span>);
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">logo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>&lt;<span style="color:#f92672">string</span>&gt;(<span style="color:#e6db74">&#39;./logo.png&#39;</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span>&lt;<span style="color:#f92672">any</span>&gt;(<span style="color:#e6db74">&#39;./Button.scss&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">logo</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span>&lt;<span style="color:#f92672">string</span>&gt;(<span style="color:#e6db74">&#39;./logo.png&#39;</span>);
 </code></pre></div></article>
  
       
