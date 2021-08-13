@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>首页 on JavaScript 学习笔记</title>
+    <link>https://ikingye.github.io/study-javascript/</link>
+    <description>Recent content in 首页 on JavaScript 学习笔记</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>教程</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/turorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/turorial/</guid>
+      <description>教程 #  基础 #  ruanyf/jstraining #  全栈工程师培训材料，帮助学习者掌握 JavaScript 全栈开发的基本知识，承担简单 Web 应用的前后端开发。
+一共四讲，适合两天的训练营。
+denysdovhan/wtfjs #  A list of funny and tricky JavaScript examples
+nefe/You-Dont-Need-jQuery #  使用原生方法实现 jQuery API 功能（暂时只支持 IE10 以上浏览器）。
+verekia/js-stack-from-scratch #  🛠️⚡ Step-by-step tutorial to build a modern JavaScript stack.
+lowerfish/js-stack-from-scratch #  从零开始构建 JavaScript 技术栈 第 2 版
+ 进阶 #   </description>
+    </item>
+    
+    <item>
+      <title>百度</title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/</guid>
+      <description>百度 JavaScript 编码规范 #  1 前言
+2 代码风格
+2.1 文件
+2.2 结构
+2.2.1 缩进
+2.2.2 空格
+2.2.3 换行
+2.2.4 语句
+2.3 命名
+2.4 注释
+2.4.1 单行注释
+2.4.2 多行注释
+2.4.3 文档化注释
+2.4.4 类型定义
+2.4.5 文件注释
+2.4.6 命名空间注释
+2.4.7 类注释
+2.4.8 函数/方法注释
+2.4.9 事件注释
+2.4.10 常量注释
+2.4.11 复杂类型注释
+2.4.12 AMD 模块注释
+2.4.13 细节注释
+3 语言特性
+3.1 变量
+3.2 条件
+3.3 循环
+3.4 类型
+3.4.1 类型检测
+3.4.2 类型转换
+3.5 字符串
+3.6 对象</description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/interview/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/interview/basic/</guid>
+      <description>基础面试题 #  </description>
+    </item>
+    
+    <item>
+      <title>进阶</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/interview/advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/interview/advanced/</guid>
+      <description>进阶面试题 #  </description>
+    </item>
+    
+    <item>
+      <title>高阶</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/interview/expert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/interview/expert/</guid>
+      <description>高阶面试题 #  </description>
+    </item>
+    
+    <item>
+      <title>4.3 关注项目</title>
+      <link>https://ikingye.github.io/study-javascript/docs/appendix/attention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/appendix/attention/</guid>
+      <description>关注项目 #  octokit/rest.js #  GitHub REST API client for JavaScript https://octokit.github.io/rest.js/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/css/</guid>
+      <description>CSS 编码规范 #  1 前言
+2 代码风格
+2.1 文件
+2.2 缩进
+2.3 空格
+2.4 行长度
+2.5 选择器
+2.6 属性
+3 通用
+3.1 选择器
+3.2 属性缩写
+3.3 属性书写顺序
+3.4 清除浮动
+3.5 !important
+3.6 z-index
+4 值与单位
+4.1 文本
+4.2 数值
+4.3 url()
+4.4 长度
+4.5 颜色
+4.6 2D 位置
+5 文本编排
+5.1 字体族
+5.2 字号
+5.3 字体风格
+5.4 字重
+5.5 行高
+6 变换与动画
+7 响应式
+8 兼容性
+8.1 属性前缀
+8.2 Hack</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/</guid>
+      <description>JavaScript 编码规范 - ESNext 补充篇（草案） #  1 前言
+2 代码风格
+2.1 文件
+2.2 结构
+2.2.1 缩进
+2.2.2 空格
+2.2.3 语句
+3 语言特性
+3.1 变量
+3.2 解构
+3.3 模板字符串
+3.4 函数
+3.5 箭头函数
+3.6 对象
+3.7 类
+3.8 模块
+3.9 集合
+3.10 异步
+4 环境
+4.1 运行环境
+4.2 预编译
+1 前言 #  随着 ECMAScript 的不断发展，越来越多更新的语言特性将被使用，给应用的开发带来方便。本文档的目标是使 ECMAScript 新特性的代码风格保持一致，并给予一些实践建议。
+本文档仅包含新特性部分。基础部分请遵循 JavaScript Style Guide。
+由于 ECMAScript 依然在快速的不断发展，本文档也将可能随时保持更新。更新内容主要涉及对新增的语言特性的格式规范化、实践指导，引擎与编译器环境变化的使用指导。
+虽然本文档是针对 ECMAScript 设计的，但是在使用各种基于 ECMAScript 扩展的语言时(如 JSX、TypeScript 等)，适用的部分也应尽量遵循本文档的约定。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/</guid>
+      <description>HTML 编码规范 #  1 前言
+2 代码风格
+2.1 缩进与换行
+2.2 命名
+2.3 标签
+2.4 属性
+3 通用
+3.1 DOCTYPE
+3.2 编码
+3.3 CSS 和 JavaScript 引入
+4 head
+4.1 title
+4.2 favicon
+4.3 viewport
+5 图片
+6 表单
+6.1 控件标题
+6.2 按钮
+6.3 可访问性 (A11Y)
+7 多媒体
+8 模板中的 HTML
+1 前言 #  HTML 作为描述网页结构的超文本标记语言，在百度一直有着广泛的应用。本文档的目标是使 HTML 代码风格保持一致，容易被理解和被维护。
+任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
+2 代码风格 #  2.1 缩进与换行 #  [强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。 #  解释： 对于非 HTML 标签之间的缩进，比如 script 或 style 标签内容缩进，与 script 或 style 标签的缩进同级。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/react/</guid>
+      <description>React 编码规范 #  1 版本限制
+1.1 法律要求
+2 文件组织
+2.1 命名
+2.2 模块化
+3 命名规则
+3.1 组件
+3.2 属性
+3.3 高阶组件
+4 组件声明
+4.1 组件
+4.2 属性
+4.3 生命周期
+4.4 高阶组件
+5 组件实现
+5.1 更新机制
+5.2 纯函数应用
+6 JSX
+6.1 标签
+6.2 属性
+6.2.1 层级
+1 版本限制 #  1.1 法律要求 #  [强制] 使用 React &amp;gt;=15.6.2版本 #  解释
+在15.6.2以前的版本协议带有 Facebook Patents，依据法务风险，严禁使用。
+2 文件组织 #  2.1 命名 #  [强制] 同一目录下不得拥有同名的.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/</guid>
+      <description>TypeScript 编码规范 #  1 前言
+2 代码风格
+2.1 环境
+2.2 文件
+2.3 命名
+3 语言特性
+3.1 变量
+3.2 类型
+3.3 条件
+3.4 循环
+3.5 数组
+3.6 对象
+3.7 函数
+3.8 类
+3.9 模块
+1 前言 #  随着 TypeScript 的不断发展，越来越多的开发者认可并使用 TypeScript 开发应用。本文档的目标是使 TypeScript 新特性的代码风格保持一致，并给予一些实践建议。
+本文档基本遵循 JavaScript Style Guide 与 ES-Next Style Guide。
+由于 TypeScript 依然在快速发展，本文档也将随时保持更新。更新内容主要涉及对新增的语言特性的格式规范化、实践指导，引擎与编译器环境变化的使用指导。
+任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
+2 代码风格 #  2.1 环境 #  [强制] TypeScript 文件使用 .ts 扩展名。含 JSX 语法的 TypeScript 文件使用 .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/vue/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/vue/</guid>
+      <description>Vue 组件代码规范 #  1 前言
+2 代码风格
+2.1 缩进
+2.2 单行最长限制
+2.3 模块书写顺序
+3 template 部分
+3.1 根节点
+3.2 标签
+3.3 属性
+3.4 指令
+3.5 插值（Mustache）
+3.6 空格
+3.7 变量
+4 javascript 部分
+4.1 props
+4.2 data
+4.3 变量
+4.4 其他
+5 style 部分
+6 参考
+1 前言 #  任何问题或建议，欢迎跟我们讨论: fe-styleguide@baidu.com
+2 代码风格 #  2.1 缩进 #  [强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格或 tab 字符 #  2.</description>
+    </item>
+    
+  </channel>
+</rss>

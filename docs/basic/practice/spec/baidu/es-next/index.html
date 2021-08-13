@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="generator" content="Hugo 0.87.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="JavaScript 编码规范 - ESNext 补充篇（草案） #  1 前言
+2 代码风格
+2.1 文件
+2.2 结构
+2.2.1 缩进
+2.2.2 空格
+2.2.3 语句
+3 语言特性
+3.1 变量
+3.2 解构
+3.3 模板字符串
+3.4 函数
+3.5 箭头函数
+3.6 对象
+3.7 类
+3.8 模块
+3.9 集合
+3.10 异步
+4 环境
+4.1 运行环境
+4.2 预编译
+1 前言 #  随着 ECMAScript 的不断发展，越来越多更新的语言特性将被使用，给应用的开发带来方便。本文档的目标是使 ECMAScript 新特性的代码风格保持一致，并给予一些实践建议。
+本文档仅包含新特性部分。基础部分请遵循 JavaScript Style Guide。
+由于 ECMAScript 依然在快速的不断发展，本文档也将可能随时保持更新。更新内容主要涉及对新增的语言特性的格式规范化、实践指导，引擎与编译器环境变化的使用指导。
+虽然本文档是针对 ECMAScript 设计的，但是在使用各种基于 ECMAScript 扩展的语言时(如 JSX、TypeScript 等)，适用的部分也应尽量遵循本文档的约定。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="JavaScript 编码规范 - ESNext 补充篇（草案） #  1 前言
+2 代码风格
+2.1 文件
+2.2 结构
+2.2.1 缩进
+2.2.2 空格
+2.2.3 语句
+3 语言特性
+3.1 变量
+3.2 解构
+3.3 模板字符串
+3.4 函数
+3.5 箭头函数
+3.6 对象
+3.7 类
+3.8 模块
+3.9 集合
+3.10 异步
+4 环境
+4.1 运行环境
+4.2 预编译
+1 前言 #  随着 ECMAScript 的不断发展，越来越多更新的语言特性将被使用，给应用的开发带来方便。本文档的目标是使 ECMAScript 新特性的代码风格保持一致，并给予一些实践建议。
+本文档仅包含新特性部分。基础部分请遵循 JavaScript Style Guide。
+由于 ECMAScript 依然在快速的不断发展，本文档也将可能随时保持更新。更新内容主要涉及对新增的语言特性的格式规范化、实践指导，引擎与编译器环境变化的使用指导。
+虽然本文档是针对 ECMAScript 设计的，但是在使用各种基于 ECMAScript 扩展的语言时(如 JSX、TypeScript 等)，适用的部分也应尽量遵循本文档的约定。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2020-08-04T23:47:37+08:00" />
+
+<title>Es Next | JavaScript 学习笔记</title>
+<link rel="manifest" href="/study-javascript/manifest.json">
+<link rel="icon" href="/study-javascript/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/study-javascript/book.min.e7360c502a84143addd190981586c3e3e8f082b67f6799dc9f237a599fe0be5a.css" integrity="sha256-5zYMUCqEFDrd0ZCYFYbD4&#43;jwgrZ/Z5ncnyN6WZ/gvlo=">
+<script defer src="/study-javascript/en.search.min.f6a43e518834121adb819d1ea738ed0488477fd8d2ef2e94e3cecb21a91ec2ef.js" integrity="sha256-9qQ&#43;UYg0EhrbgZ0epzjtBIhHf9jS7y6U487LIakewu8="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/study-javascript"><span>JavaScript 学习笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+<ul>
+  <li><a href="https://kingye.me" target="_blank" rel="noopener noreferrer">博客</a></li>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417021727.png" target="_blank" rel="noopener noreferrer">公众号</a></li>
+  <li><a href="https://github.com/ikingye" target="_blank" rel="noopener noreferrer">Github</a></li>
+  <li><a href="https://weibo.com/kingyip15215" target="_blank" rel="noopener noreferrer">微博</a></li>
+  <li><a href="https://www.zhihu.com/people/wutongyip" target="_blank" rel="noopener noreferrer">知乎</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第一部分 基础入门</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/" class="">实践</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-75d592e003495e4661619eca5ec17af5" class="toggle" checked />
+    <label for="section-75d592e003495e4661619eca5ec17af5" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/" class="">编程规范</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/" class="">百度</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b647ebf22e5d9f5a9e5df7a67cbead82" class="toggle" checked />
+    <label for="section-b647ebf22e5d9f5a9e5df7a67cbead82" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/" class="">百度前端编程规范</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/css/" class="">Css</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/" class=" active">Es Next</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/react/" class="">React</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/" class="">Typescript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/vue/" class="">Vue</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-886ba526b5db563e9141f7b3d97846bd" class="toggle"  />
+    <label for="section-886ba526b5db563e9141f7b3d97846bd" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/basic/practice/snippet/" class="">代码片段</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第二部分 设计</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第三部分 源码实现</span>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>第四部分 附录</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-fa7ee5dac0ac277f96a6d9e2a994ab50" class="toggle"  />
+    <label for="section-fa7ee5dac0ac277f96a6d9e2a994ab50" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/appendix/turorial/" class="">教程</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1291561338a2c243cca077171f0fe528" class="toggle"  />
+    <label for="section-1291561338a2c243cca077171f0fe528" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/appendix/interview/" class="">4.2 面试题</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/appendix/interview/basic/" class="">基础</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/appendix/interview/advanced/" class="">进阶</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://ikingye.github.io/study-javascript/docs/appendix/interview/expert/" class="">高阶</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c743998336860c656367010fc7573b86" class="toggle"  />
+    <label for="section-c743998336860c656367010fc7573b86" class="flex justify-between">
+      <a href="https://ikingye.github.io/study-javascript/docs/appendix/attention/" class="">4.3 关注项目</a>
+    </label>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<ul>
+  <li><a href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200417022040.png" target="_blank" rel="noopener noreferrer">微信</a></li>
+  <li><a href="https://qm.qq.com/cgi-bin/qm/qr?k=EUhzg0UwUksxpQnwEmPngRLezlC6qrnn&jump_from=webapi" target="_blank" rel="noopener noreferrer"><img src="//pub.idqqimg.com/wpa/images/group.png"></a></li>
+</ul>
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/study-javascript/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Es Next</strong>
+
+  <label for="toc-control">
+    
+    <img src="/study-javascript/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-前言">1 前言</a></li>
+    <li><a href="#2-代码风格">2 代码风格</a>
+      <ul>
+        <li><a href="#21-文件">2.1 文件</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#建议-esnext-语法的-javascript-文件使用-js-扩展名">[建议] ESNext 语法的 JavaScript 文件使用 <code>.js</code> 扩展名。</a></li>
+                <li><a href="#强制-当文件无法使用-js-扩展名时使用-es-扩展名">[强制] 当文件无法使用 <code>.js</code> 扩展名时，使用 <code>.es</code> 扩展名。</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#22-结构">2.2 结构</a>
+          <ul>
+            <li><a href="#221-缩进">2.2.1 缩进</a>
+              <ul>
+                <li><a href="#建议-使用多行模板字符串时遵循缩进原则当空行与空白字符敏感时不使用多行模板字符串">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
+              </ul>
+            </li>
+            <li><a href="#222-空格">2.2.2 空格</a>
+              <ul>
+                <li><a href="#强制-使用-generator-时-前面不允许有空格-后面必须有一个空格">[强制] 使用 <code>generator</code> 时，<code>*</code> 前面不允许有空格，<code>*</code> 后面必须有一个空格。</a></li>
+              </ul>
+            </li>
+            <li><a href="#223-语句">2.2.3 语句</a>
+              <ul>
+                <li><a href="#强制-类声明结束不允许添加分号">[强制] 类声明结束不允许添加分号。</a></li>
+                <li><a href="#强制-类成员定义中方法定义后不允许添加分号成员属性定义后必须添加分号">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
+                <li><a href="#强制-export-语句后不允许出现表示空语句的分号">[强制] <code>export</code> 语句后，不允许出现表示空语句的分号。</a></li>
+                <li><a href="#强制-属性装饰器后可以不加分号的场景不允许加分号">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
+                <li><a href="#强制-箭头函数的参数只有一个并且不包含解构时参数部分的括号必须省略">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
+                <li><a href="#建议-箭头函数的函数体只有一个单行表达式语句且作为返回值时省略--和-return">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 <code>{}</code> 和 <code>return</code>。</a></li>
+                <li><a href="#建议-箭头函数的函数体只有一个-object-literal且作为返回值时使用--包裹">[建议] 箭头函数的函数体只有一个 <code>Object Literal</code>，且作为返回值时，使用 <code>()</code> 包裹。</a></li>
+                <li><a href="#强制-解构多个变量时如果超过行长度限制每个解构的变量必须单独一行">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
+              </ul>
+            </li>
+            <li><a href="#强制-对于对象初始化数组初始化import及export语句当其多个子元素占用多行时最后一个元素后必须保留逗号">[强制] 对于对象初始化、数组初始化、<code>import</code>及<code>export</code>语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-语言特性">3 语言特性</a>
+      <ul>
+        <li><a href="#31-变量">3.1 变量</a>
+          <ul>
+            <li><a href="#强制-使用-let-和-const-定义变量不使用-var">[强制] 使用 <code>let</code> 和 <code>const</code> 定义变量，不使用 <code>var</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-解构">3.2 解构</a>
+          <ul>
+            <li><a href="#强制-不要使用-3-层及以上的解构">[强制] 不要使用 3 层及以上的解构。</a></li>
+            <li><a href="#建议-使用解构减少中间变量">[建议] 使用解构减少中间变量。</a></li>
+            <li><a href="#强制-如果不节省编写时产生的中间变量解构表达式--号右边不允许是-objectliteral-和-arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 <code>=</code> 号右边不允许是 <code>ObjectLiteral</code> 和 <code>ArrayLiteral</code>。</a></li>
+            <li><a href="#强制-使用剩余运算符时剩余运算符之前的所有元素必需具名">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-模板字符串">3.3 模板字符串</a>
+          <ul>
+            <li><a href="#强制-字符串内变量替换时不要使用-2-次及以上的函数调用">[强制] 字符串内变量替换时，不要使用 <code>2</code> 次及以上的函数调用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-函数">3.4 函数</a>
+          <ul>
+            <li><a href="#建议-使用变量默认语法代替基于条件判断的默认值声明">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
+            <li><a href="#强制-不要使用-arguments-对象应使用-args-代替">[强制] 不要使用 <code>arguments</code> 对象，应使用 <code>...args</code> 代替。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-箭头函数">3.5 箭头函数</a>
+          <ul>
+            <li><a href="#强制-一个函数被设计为需要-call-和-apply-的时候不能是箭头函数">[强制] 一个函数被设计为需要 <code>call</code> 和 <code>apply</code> 的时候，不能是箭头函数。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-对象">3.6 对象</a>
+          <ul>
+            <li><a href="#强制-定义方法时使用-methoddefinition-语法不使用-propertyname-functionexpression-语法">[强制] 定义方法时使用 <code>MethodDefinition</code> 语法，不使用 <code>PropertyName: FunctionExpression</code> 语法。</a></li>
+            <li><a href="#建议-使用-objectkeys-或-objectentries-进行对象遍历">[建议] 使用 <code>Object.keys</code> 或 <code>Object.entries</code> 进行对象遍历。</a></li>
+            <li><a href="#建议-定义对象的方法不应使用箭头函数">[建议] 定义对象的方法不应使用箭头函数。</a></li>
+            <li><a href="#建议-尽量使用计算属性键在一个完整的字面量中完整地定义一个对象避免对象定义后直接增加对象属性">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-类">3.7 类</a>
+          <ul>
+            <li><a href="#强制-使用-class-关键字定义一个类">[强制] 使用 <code>class</code> 关键字定义一个类。</a></li>
+            <li><a href="#强制-使用-super-访问父类成员而非父类的-prototype">[强制] 使用 <code>super</code> 访问父类成员，而非父类的 <code>prototype</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#38-模块">3.8 模块</a>
+          <ul>
+            <li><a href="#建议-相互之间无关联的内容使用命名导出">[建议] 相互之间无关联的内容使用命名导出。</a></li>
+            <li><a href="#强制-所有-import-语句写在模块开始处">[强制] 所有 <code>import</code> 语句写在模块开始处。</a></li>
+          </ul>
+        </li>
+        <li><a href="#39-集合">3.9 集合</a>
+          <ul>
+            <li><a href="#建议-对数组进行连接操作时使用数组展开语法">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
+            <li><a href="#建议-不要使用数组展开进行数组的复制操作">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
+            <li><a href="#建议-尽可能使用-for--of-进行遍历">[建议] 尽可能使用 <code>for .. of</code> 进行遍历。</a></li>
+            <li><a href="#强制-当键值有可能不是字符串时必须使用-map当元素有可能不是字符串时必须使用-set">[强制] 当键值有可能不是字符串时，必须使用 <code>Map</code>；当元素有可能不是字符串时，必须使用 <code>Set</code>。</a></li>
+            <li><a href="#建议-需要一个不可重复的集合时应使用-set">[建议] 需要一个不可重复的集合时，应使用 <code>Set</code>。</a></li>
+            <li><a href="#建议-当需要遍历功能时使用-map-和-set">[建议] 当需要遍历功能时，使用 <code>Map</code> 和 <code>Set</code>。</a></li>
+            <li><a href="#建议-程序运行过程中有添加或移除元素的操作时使用-map-和-set">[建议] 程序运行过程中有添加或移除元素的操作时，使用 <code>Map</code> 和 <code>Set</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#310-异步">3.10 异步</a>
+          <ul>
+            <li><a href="#强制-回调函数的嵌套不得超过-3-层">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
+            <li><a href="#建议-使用-promise-代替-callback">[建议] 使用 <code>Promise</code> 代替 <code>callback</code>。</a></li>
+            <li><a href="#强制-使用标准的-promise-api">[强制] 使用标准的 <code>Promise</code> API。</a></li>
+            <li><a href="#强制-不允许直接扩展-promise-对象的-prototype">[强制] 不允许直接扩展 <code>Promise</code> 对象的 <code>prototype</code>。</a></li>
+            <li><a href="#强制-不得为了编写的方便将可以并行的-io-过程串行化">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
+            <li><a href="#建议-使用-asyncawait-代替-generator--co">[建议] 使用 <code>async/await</code> 代替 <code>generator</code> + <code>co</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-环境">4 环境</a>
+      <ul>
+        <li><a href="#41-运行环境">4.1 运行环境</a>
+          <ul>
+            <li><a href="#建议-持续跟进与关注运行环境对语言特性的支持程度">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
+            <li><a href="#强制-在运行环境中没有-promise-时将-promise-的实现-shim-到-global-中">[强制] 在运行环境中没有 <code>Promise</code> 时，将 <code>Promise</code> 的实现 <code>shim</code> 到 <code>global</code> 中。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-预编译">4.2 预编译</a>
+          <ul>
+            <li><a href="#建议-使用-babel-做为预编译工具时建议使用-5x-版本">[建议] 使用 <code>babel</code> 做为预编译工具时，建议使用 <code>5.x</code> 版本。</a></li>
+            <li><a href="#建议-使用-babel-做为预编译工具时通过-external-helpers-减少生成文件的大小">[建议] 使用 <code>babel</code> 做为预编译工具时，通过 <code>external-helpers</code> 减少生成文件的大小。</a></li>
+            <li><a href="#建议-使用-typescript-做为预编译工具时建议使用-16-版本">[建议] 使用 <code>TypeScript</code> 做为预编译工具时，建议使用 <code>1.6+</code> 版本。</a></li>
+            <li><a href="#建议-使用-typescript-做为预编译工具时不使用-tsc-命令">[建议] 使用 <code>TypeScript</code> 做为预编译工具时，不使用 <code>tsc</code> 命令。</a></li>
+            <li><a href="#建议-生成的代码在浏览器环境运行时应生成-amd-模块化代码">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
+            <li><a href="#建议-浏览器端项目中如果-esnext-代码和-es35-代码混合不要使用-typescript-做为预编译工具">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 <code>TypeScript</code> 做为预编译工具。</a></li>
+            <li><a href="#建议-amdcommonjs-模块依赖-esnext-模块时amdcommonjs-模块对-default-export-的-require-需要改造">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="javascript-编码规范---esnext-补充篇草案">
+  JavaScript 编码规范 - ESNext 补充篇（草案）
+  <a class="anchor" href="#javascript-%e7%bc%96%e7%a0%81%e8%a7%84%e8%8c%83---esnext-%e8%a1%a5%e5%85%85%e7%af%87%e8%8d%89%e6%a1%88">#</a>
+</h1>
+<p><a href="#1">1 前言</a></p>
+<p><a href="#2">2 代码风格</a></p>
+<p><a href="#2-1">2.1 文件</a></p>
+<p><a href="#2-2">2.2 结构</a></p>
+<p><a href="#2-2-1">2.2.1 缩进</a></p>
+<p><a href="#2-2-2">2.2.2 空格</a></p>
+<p><a href="#2-2-3">2.2.3 语句</a></p>
+<p><a href="#3">3 语言特性</a></p>
+<p><a href="#3-1">3.1 变量</a></p>
+<p><a href="#3-2">3.2 解构</a></p>
+<p><a href="#3-3">3.3 模板字符串</a></p>
+<p><a href="#3-4">3.4 函数</a></p>
+<p><a href="#3-5">3.5 箭头函数</a></p>
+<p><a href="#3-6">3.6 对象</a></p>
+<p><a href="#3-7">3.7 类</a></p>
+<p><a href="#3-8">3.8 模块</a></p>
+<p><a href="#3-9">3.9 集合</a></p>
+<p><a href="#3-10">3.10 异步</a></p>
+<p><a href="#4">4 环境</a></p>
+<p><a href="#4-1">4.1 运行环境</a></p>
+<p><a href="#4-2">4.2 预编译</a></p>
+<h2 id="1-前言">
+  1 前言
+  <a class="anchor" href="#1-%e5%89%8d%e8%a8%80">#</a>
+</h2>
+<p>随着 ECMAScript 的不断发展，越来越多更新的语言特性将被使用，给应用的开发带来方便。本文档的目标是使 ECMAScript 新特性的代码风格保持一致，并给予一些实践建议。</p>
+<p>本文档仅包含新特性部分。基础部分请遵循 <a href="javascript-style-guide.md">JavaScript Style Guide</a>。</p>
+<p>由于 ECMAScript 依然在快速的不断发展，本文档也将可能随时保持更新。更新内容主要涉及对新增的语言特性的格式规范化、实践指导，引擎与编译器环境变化的使用指导。</p>
+<p>虽然本文档是针对 ECMAScript 设计的，但是在使用各种基于 ECMAScript 扩展的语言时(如 JSX、TypeScript 等)，适用的部分也应尽量遵循本文档的约定。</p>
+<p>任何问题或建议，欢迎跟我们讨论: <a href="mailto:fe-styleguide@baidu.com">fe-styleguide@baidu.com</a></p>
+<h2 id="2-代码风格">
+  2 代码风格
+  <a class="anchor" href="#2-%e4%bb%a3%e7%a0%81%e9%a3%8e%e6%a0%bc">#</a>
+</h2>
+<h3 id="21-文件">
+  2.1 文件
+  <a class="anchor" href="#21-%e6%96%87%e4%bb%b6">#</a>
+</h3>
+<h5 id="建议-esnext-语法的-javascript-文件使用-js-扩展名">
+  [建议] ESNext 语法的 JavaScript 文件使用 <code>.js</code> 扩展名。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-esnext-%e8%af%ad%e6%b3%95%e7%9a%84-javascript-%e6%96%87%e4%bb%b6%e4%bd%bf%e7%94%a8-js-%e6%89%a9%e5%b1%95%e5%90%8d">#</a>
+</h5>
+<h5 id="强制-当文件无法使用-js-扩展名时使用-es-扩展名">
+  [强制] 当文件无法使用 <code>.js</code> 扩展名时，使用 <code>.es</code> 扩展名。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%bd%93%e6%96%87%e4%bb%b6%e6%97%a0%e6%b3%95%e4%bd%bf%e7%94%a8-js-%e6%89%a9%e5%b1%95%e5%90%8d%e6%97%b6%e4%bd%bf%e7%94%a8-es-%e6%89%a9%e5%b1%95%e5%90%8d">#</a>
+</h5>
+<p>解释：</p>
+<p>某些应用开发时，可能同时包含 ES 5 和 ESNext 文件，运行环境仅支持 ES5，ESNext 文件需要经过预编译。部分场景下，编译工具的选择可能需要通过扩展名区分，需要重新定义 ESNext 文件的扩展名。此时，ESNext 文件必须使用 <code>.es</code> 扩展名。</p>
+<p>但是，更推荐使用其他条件作为是否需要编译的区分：</p>
+<ol>
+<li>基于文件内容。</li>
+<li>不同类型文件放在不同目录下。</li>
+</ol>
+<h3 id="22-结构">
+  2.2 结构
+  <a class="anchor" href="#22-%e7%bb%93%e6%9e%84">#</a>
+</h3>
+<h4 id="221-缩进">
+  2.2.1 缩进
+  <a class="anchor" href="#221-%e7%bc%a9%e8%bf%9b">#</a>
+</h4>
+<h5 id="建议-使用多行模板字符串时遵循缩进原则当空行与空白字符敏感时不使用多行模板字符串">
+  [建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8%e5%a4%9a%e8%a1%8c%e6%a8%a1%e6%9d%bf%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%97%b6%e9%81%b5%e5%be%aa%e7%bc%a9%e8%bf%9b%e5%8e%9f%e5%88%99%e5%bd%93%e7%a9%ba%e8%a1%8c%e4%b8%8e%e7%a9%ba%e7%99%bd%e5%ad%97%e7%ac%a6%e6%95%8f%e6%84%9f%e6%97%b6%e4%b8%8d%e4%bd%bf%e7%94%a8%e5%a4%9a%e8%a1%8c%e6%a8%a1%e6%9d%bf%e5%ad%97%e7%ac%a6%e4%b8%b2">#</a>
+</h5>
+<p>解释：</p>
+<p><code>4</code> 空格为一个缩进，换行后添加一层缩进。将起始和结束的 <code>`</code> 符号单独放一行，有助于生成 HTML 时的标签对齐。</p>
+<p>为避免破坏缩进的统一，当空行与空白字符敏感时，建议使用 <code>多个模板字符串</code> 或 <code>普通字符串</code> 进行连接运算，也可使用数组 <code>join</code> 生成字符串。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">        &lt;div&gt;
+</span><span style="color:#e6db74">            &lt;p&gt;&lt;/p&gt;
+</span><span style="color:#e6db74">            &lt;p&gt;&lt;/p&gt;
+</span><span style="color:#e6db74">        &lt;/div&gt;
+</span><span style="color:#e6db74">    `</span>;
+}
+
+<span style="color:#75715e">// Good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeting</span>(<span style="color:#a6e22e">name</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, \n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">firstName</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">lastName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+}
+
+<span style="color:#75715e">// Bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeting</span>(<span style="color:#a6e22e">name</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello,
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">firstName</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">lastName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+}
+</code></pre></div><h4 id="222-空格">
+  2.2.2 空格
+  <a class="anchor" href="#222-%e7%a9%ba%e6%a0%bc">#</a>
+</h4>
+<h5 id="强制-使用-generator-时-前面不允许有空格-后面必须有一个空格">
+  [强制] 使用 <code>generator</code> 时，<code>*</code> 前面不允许有空格，<code>*</code> 后面必须有一个空格。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-generator-%e6%97%b6-%e5%89%8d%e9%9d%a2%e4%b8%8d%e5%85%81%e8%ae%b8%e6%9c%89%e7%a9%ba%e6%a0%bc-%e5%90%8e%e9%9d%a2%e5%bf%85%e9%a1%bb%e6%9c%89%e4%b8%80%e4%b8%aa%e7%a9%ba%e6%a0%bc">#</a>
+</h5>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">caller</span>() {
+  <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;a&#34;</span>;
+  <span style="color:#66d9ef">yield</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">callee</span>();
+  <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;d&#34;</span>;
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">caller</span>() {
+  <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;a&#34;</span>;
+  <span style="color:#66d9ef">yield</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">callee</span>();
+  <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;d&#34;</span>;
+}
+</code></pre></div><h4 id="223-语句">
+  2.2.3 语句
+  <a class="anchor" href="#223-%e8%af%ad%e5%8f%a5">#</a>
+</h4>
+<h5 id="强制-类声明结束不允许添加分号">
+  [强制] 类声明结束不允许添加分号。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e7%b1%bb%e5%a3%b0%e6%98%8e%e7%bb%93%e6%9d%9f%e4%b8%8d%e5%85%81%e8%ae%b8%e6%b7%bb%e5%8a%a0%e5%88%86%e5%8f%b7">#</a>
+</h5>
+<p>解释：</p>
+<p>与函数声明保持一致。</p>
+<h5 id="强制-类成员定义中方法定义后不允许添加分号成员属性定义后必须添加分号">
+  [强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e7%b1%bb%e6%88%90%e5%91%98%e5%ae%9a%e4%b9%89%e4%b8%ad%e6%96%b9%e6%b3%95%e5%ae%9a%e4%b9%89%e5%90%8e%e4%b8%8d%e5%85%81%e8%ae%b8%e6%b7%bb%e5%8a%a0%e5%88%86%e5%8f%b7%e6%88%90%e5%91%98%e5%b1%9e%e6%80%a7%e5%ae%9a%e4%b9%89%e5%90%8e%e5%bf%85%e9%a1%bb%e6%b7%bb%e5%8a%a0%e5%88%86%e5%8f%b7">#</a>
+</h5>
+<p>解释：</p>
+<p>成员属性是当前 <strong>Stage 0</strong> 的标准，如果使用的话，则定义后加上分号。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span> {
+  <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+
+  <span style="color:#a6e22e">bar</span>() {}
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span> {
+  <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+
+  <span style="color:#a6e22e">bar</span>() {}
+}
+</code></pre></div><h5 id="强制-export-语句后不允许出现表示空语句的分号">
+  [强制] <code>export</code> 语句后，不允许出现表示空语句的分号。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-export-%e8%af%ad%e5%8f%a5%e5%90%8e%e4%b8%8d%e5%85%81%e8%ae%b8%e5%87%ba%e7%8e%b0%e8%a1%a8%e7%a4%ba%e7%a9%ba%e8%af%ad%e5%8f%a5%e7%9a%84%e5%88%86%e5%8f%b7">#</a>
+</h5>
+<p>解释：</p>
+<p><code>export</code> 关键字不影响后续语句类型。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bar</span>() {}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bar</span>() {}
+</code></pre></div><h5 id="强制-属性装饰器后可以不加分号的场景不允许加分号">
+  [强制] 属性装饰器后，可以不加分号的场景，不允许加分号。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%b1%9e%e6%80%a7%e8%a3%85%e9%a5%b0%e5%99%a8%e5%90%8e%e5%8f%af%e4%bb%a5%e4%b8%8d%e5%8a%a0%e5%88%86%e5%8f%b7%e7%9a%84%e5%9c%ba%e6%99%af%e4%b8%8d%e5%85%81%e8%ae%b8%e5%8a%a0%e5%88%86%e5%8f%b7">#</a>
+</h5>
+<p>解释：</p>
+<p>只有一种场景是必须加分号的：当属性 <code>key</code> 是 <code>computed property key</code> 时，其装饰器必须加分号，否则修饰 <code>key</code> 的 <code>[]</code> 会做为之前表达式的 <code>property accessor</code>。</p>
+<p>上面描述的场景，装饰器后需要加分号。其余场景下的属性装饰器后不允许加分号。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span> {
+    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;INFO&#39;</span>)
+    <span style="color:#a6e22e">bar</span>() {
+
+    }
+
+    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;INFO&#39;</span>);
+    [<span style="color:#e6db74">&#39;bar&#39;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>]() {
+
+    }
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span> {
+    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;INFO&#39;</span>);
+    <span style="color:#a6e22e">bar</span>() {
+
+    }
+
+    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;INFO&#39;</span>)
+    [<span style="color:#e6db74">&#39;bar&#39;</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>]() {
+
+    }
+}
+</code></pre></div><h5 id="强制-箭头函数的参数只有一个并且不包含解构时参数部分的括号必须省略">
+  [强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0%e7%9a%84%e5%8f%82%e6%95%b0%e5%8f%aa%e6%9c%89%e4%b8%80%e4%b8%aa%e5%b9%b6%e4%b8%94%e4%b8%8d%e5%8c%85%e5%90%ab%e8%a7%a3%e6%9e%84%e6%97%b6%e5%8f%82%e6%95%b0%e9%83%a8%e5%88%86%e7%9a%84%e6%8b%ac%e5%8f%b7%e5%bf%85%e9%a1%bb%e7%9c%81%e7%95%a5">#</a>
+</h5>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+
+<span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fetchName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">id</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">request</span>(<span style="color:#e6db74">`users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">fullName</span>;
+};
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fetchName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> <span style="color:#a6e22e">id</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">request</span>(<span style="color:#e6db74">`users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">fullName</span>;
+};
+</code></pre></div><h5 id="建议-箭头函数的函数体只有一个单行表达式语句且作为返回值时省略--和-return">
+  [建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 <code>{}</code> 和 <code>return</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0%e7%9a%84%e5%87%bd%e6%95%b0%e4%bd%93%e5%8f%aa%e6%9c%89%e4%b8%80%e4%b8%aa%e5%8d%95%e8%a1%8c%e8%a1%a8%e8%be%be%e5%bc%8f%e8%af%ad%e5%8f%a5%e4%b8%94%e4%bd%9c%e4%b8%ba%e8%bf%94%e5%9b%9e%e5%80%bc%e6%97%b6%e7%9c%81%e7%95%a5--%e5%92%8c-return">#</a>
+</h5>
+<p>如果单个表达式过长，可以使用 <code>()</code> 进行包裹。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; <span style="color:#a6e22e">item</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> () =&gt; (<span style="color:#a6e22e">condition</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">returnValueA</span>() <span style="color:#f92672">:</span> <span style="color:#a6e22e">returnValueB</span>());
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+});
+</code></pre></div><h5 id="建议-箭头函数的函数体只有一个-object-literal且作为返回值时使用--包裹">
+  [建议] 箭头函数的函数体只有一个 <code>Object Literal</code>，且作为返回值时，使用 <code>()</code> 包裹。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0%e7%9a%84%e5%87%bd%e6%95%b0%e4%bd%93%e5%8f%aa%e6%9c%89%e4%b8%80%e4%b8%aa-object-literal%e4%b8%94%e4%bd%9c%e4%b8%ba%e8%bf%94%e5%9b%9e%e5%80%bc%e6%97%b6%e4%bd%bf%e7%94%a8--%e5%8c%85%e8%a3%b9">#</a>
+</h5>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; ({ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>], <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">1</span>] }));
+</code></pre></div><h5 id="强制-解构多个变量时如果超过行长度限制每个解构的变量必须单独一行">
+  [强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e8%a7%a3%e6%9e%84%e5%a4%9a%e4%b8%aa%e5%8f%98%e9%87%8f%e6%97%b6%e5%a6%82%e6%9e%9c%e8%b6%85%e8%bf%87%e8%a1%8c%e9%95%bf%e5%ba%a6%e9%99%90%e5%88%b6%e6%af%8f%e4%b8%aa%e8%a7%a3%e6%9e%84%e7%9a%84%e5%8f%98%e9%87%8f%e5%bf%85%e9%a1%bb%e5%8d%95%e7%8b%ac%e4%b8%80%e8%a1%8c">#</a>
+</h5>
+<p>解释：</p>
+<p>太多的变量解构会让一行的代码非常长，极有可能超过单行长度控制，使代码可读性下降。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personName</span>,
+  <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personEmail</span>,
+  <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personSex</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personAge</span>
+} <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>;
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personName</span>,
+  <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personEmail</span>,
+  <span style="color:#a6e22e">sex</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personSex</span>,
+  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">personAge</span>
+} <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>;
+</code></pre></div><h4 id="强制-对于对象初始化数组初始化import及export语句当其多个子元素占用多行时最后一个元素后必须保留逗号">
+  [强制] 对于对象初始化、数组初始化、<code>import</code>及<code>export</code>语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%af%b9%e4%ba%8e%e5%af%b9%e8%b1%a1%e5%88%9d%e5%a7%8b%e5%8c%96%e6%95%b0%e7%bb%84%e5%88%9d%e5%a7%8b%e5%8c%96import%e5%8f%8aexport%e8%af%ad%e5%8f%a5%e5%bd%93%e5%85%b6%e5%a4%9a%e4%b8%aa%e5%ad%90%e5%85%83%e7%b4%a0%e5%8d%a0%e7%94%a8%e5%a4%9a%e8%a1%8c%e6%97%b6%e6%9c%80%e5%90%8e%e4%b8%80%e4%b8%aa%e5%85%83%e7%b4%a0%e5%90%8e%e5%bf%85%e9%a1%bb%e4%bf%9d%e7%95%99%e9%80%97%e5%8f%b7">#</a>
+</h4>
+<p>解释：</p>
+<p>ES Next 允许以上语法最后保留逗号，多行时保留逗号有助于快速添加或删除子元素。</p>
+<p><strong>本条规则不适用于函数调用和声明的参数，函数最后一个参数不得包含逗号</strong>。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span>];
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span>]; <span style="color:#75715e">// 单行的最后没有逗号
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">foo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">bar</span>,
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">y</span>
+};
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">foo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">bar</span> }; <span style="color:#75715e">// 单行的最后没有逗号
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;module&#34;</span>;
+
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;module&#34;</span>; <span style="color:#75715e">// 单行的最后没有逗号
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span> };
+
+<span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span> }; <span style="color:#75715e">// 单行的最后没有逗号
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">array</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">bar</span>];
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">object</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">foo</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">bar</span>,
+  <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">y</span>
+};
+</code></pre></div><h2 id="3-语言特性">
+  3 语言特性
+  <a class="anchor" href="#3-%e8%af%ad%e8%a8%80%e7%89%b9%e6%80%a7">#</a>
+</h2>
+<h3 id="31-变量">
+  3.1 变量
+  <a class="anchor" href="#31-%e5%8f%98%e9%87%8f">#</a>
+</h3>
+<h4 id="强制-使用-let-和-const-定义变量不使用-var">
+  [强制] 使用 <code>let</code> 和 <code>const</code> 定义变量，不使用 <code>var</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-let-%e5%92%8c-const-%e5%ae%9a%e4%b9%89%e5%8f%98%e9%87%8f%e4%b8%8d%e4%bd%bf%e7%94%a8-var">#</a>
+</h4>
+<p>解释：</p>
+<p>使用 <code>let</code> 和 <code>const</code> 定义时，变量作用域范围更明确。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {}
+</code></pre></div><h3 id="32-解构">
+  3.2 解构
+  <a class="anchor" href="#32-%e8%a7%a3%e6%9e%84">#</a>
+</h3>
+<h4 id="强制-不要使用-3-层及以上的解构">
+  [强制] 不要使用 3 层及以上的解构。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8-3-%e5%b1%82%e5%8f%8a%e4%bb%a5%e4%b8%8a%e7%9a%84%e8%a7%a3%e6%9e%84">#</a>
+</h4>
+<p>解释：</p>
+<p>过多层次的解构会让代码变得难以阅读。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> {
+  <span style="color:#a6e22e">documentElement</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">firstElementChild</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">nextSibling</span> }
+  }
+} <span style="color:#f92672">=</span> window;
+</code></pre></div><h4 id="建议-使用解构减少中间变量">
+  [建议] 使用解构减少中间变量。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8%e8%a7%a3%e6%9e%84%e5%87%8f%e5%b0%91%e4%b8%ad%e9%97%b4%e5%8f%98%e9%87%8f">#</a>
+</h4>
+<p>解释：</p>
+<p>常见场景如变量值交换，可能产生中间变量。这种场景推荐使用解构。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span>[<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">x</span>];
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>;
+<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span>;
+<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>;
+</code></pre></div><h4 id="强制-如果不节省编写时产生的中间变量解构表达式--号右边不允许是-objectliteral-和-arrayliteral">
+  [强制] 如果不节省编写时产生的中间变量，解构表达式 <code>=</code> 号右边不允许是 <code>ObjectLiteral</code> 和 <code>ArrayLiteral</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%a6%82%e6%9e%9c%e4%b8%8d%e8%8a%82%e7%9c%81%e7%bc%96%e5%86%99%e6%97%b6%e4%ba%a7%e7%94%9f%e7%9a%84%e4%b8%ad%e9%97%b4%e5%8f%98%e9%87%8f%e8%a7%a3%e6%9e%84%e8%a1%a8%e8%be%be%e5%bc%8f--%e5%8f%b7%e5%8f%b3%e8%be%b9%e4%b8%8d%e5%85%81%e8%ae%b8%e6%98%af-objectliteral-%e5%92%8c-arrayliteral">#</a>
+</h4>
+<p>解释：</p>
+<p>在这种场景下，使用解构将降低代码可读性，通常也并无收益。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">first</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">last</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">lastName</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">one</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">two</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">one</span>, <span style="color:#a6e22e">two</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+</code></pre></div><h4 id="强制-使用剩余运算符时剩余运算符之前的所有元素必需具名">
+  [强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8%e5%89%a9%e4%bd%99%e8%bf%90%e7%ae%97%e7%ac%a6%e6%97%b6%e5%89%a9%e4%bd%99%e8%bf%90%e7%ae%97%e7%ac%a6%e4%b9%8b%e5%89%8d%e7%9a%84%e6%89%80%e6%9c%89%e5%85%83%e7%b4%a0%e5%bf%85%e9%9c%80%e5%85%b7%e5%90%8d">#</a>
+</h4>
+<p>解释：</p>
+<p>剩余运算符之前的元素省略名称可能带来较大的程序阅读障碍。如果仅仅为了取数组后几项，请使用 <code>slice</code> 方法。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">one</span>, <span style="color:#a6e22e">two</span>, ...<span style="color:#a6e22e">anyOther</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">myArray</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">other</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">myArray</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">3</span>);
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> [, , , ...<span style="color:#a6e22e">other</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">myArray</span>;
+</code></pre></div><h3 id="33-模板字符串">
+  3.3 模板字符串
+  <a class="anchor" href="#33-%e6%a8%a1%e6%9d%bf%e5%ad%97%e7%ac%a6%e4%b8%b2">#</a>
+</h3>
+<h4 id="强制-字符串内变量替换时不要使用-2-次及以上的函数调用">
+  [强制] 字符串内变量替换时，不要使用 <code>2</code> 次及以上的函数调用。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%86%85%e5%8f%98%e9%87%8f%e6%9b%bf%e6%8d%a2%e6%97%b6%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8-2-%e6%ac%a1%e5%8f%8a%e4%bb%a5%e4%b8%8a%e7%9a%84%e5%87%bd%e6%95%b0%e8%b0%83%e7%94%a8">#</a>
+</h4>
+<p>解释：</p>
+<p>在变量替换符内有太多的函数调用等复杂语法会导致可读性下降。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getFullName</span>(<span style="color:#a6e22e">getFirstName</span>(), <span style="color:#a6e22e">getLastName</span>());
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fullName</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Hello </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">getFullName</span>(<span style="color:#a6e22e">getFirstName</span>(), <span style="color:#a6e22e">getLastName</span>())<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</code></pre></div><h3 id="34-函数">
+  3.4 函数
+  <a class="anchor" href="#34-%e5%87%bd%e6%95%b0">#</a>
+</h3>
+<h4 id="建议-使用变量默认语法代替基于条件判断的默认值声明">
+  [建议] 使用变量默认语法代替基于条件判断的默认值声明。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8%e5%8f%98%e9%87%8f%e9%bb%98%e8%ae%a4%e8%af%ad%e6%b3%95%e4%bb%a3%e6%9b%bf%e5%9f%ba%e4%ba%8e%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad%e7%9a%84%e9%bb%98%e8%ae%a4%e5%80%bc%e5%a3%b0%e6%98%8e">#</a>
+</h4>
+<p>解释：</p>
+<p>添加默认值有助于引擎的优化，在未来 <code>strong mode</code> 下也会有更好的效果。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(<span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>) {}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(<span style="color:#a6e22e">text</span>) {
+  <span style="color:#a6e22e">text</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">text</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;hello&#34;</span>;
+}
+</code></pre></div><h4 id="强制-不要使用-arguments-对象应使用-args-代替">
+  [强制] 不要使用 <code>arguments</code> 对象，应使用 <code>...args</code> 代替。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8-arguments-%e5%af%b9%e8%b1%a1%e5%ba%94%e4%bd%bf%e7%94%a8-args-%e4%bb%a3%e6%9b%bf">#</a>
+</h4>
+<p>解释：</p>
+<p>在未来 <code>strong mode</code> 下 <code>arguments</code> 将被禁用。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>(...<span style="color:#a6e22e">args</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&#34;</span>));
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>([].<span style="color:#a6e22e">join</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">arguments</span>));
+}
+</code></pre></div><h3 id="35-箭头函数">
+  3.5 箭头函数
+  <a class="anchor" href="#35-%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0">#</a>
+</h3>
+<h4 id="强制-一个函数被设计为需要-call-和-apply-的时候不能是箭头函数">
+  [强制] 一个函数被设计为需要 <code>call</code> 和 <code>apply</code> 的时候，不能是箭头函数。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%b8%80%e4%b8%aa%e5%87%bd%e6%95%b0%e8%a2%ab%e8%ae%be%e8%ae%a1%e4%b8%ba%e9%9c%80%e8%a6%81-call-%e5%92%8c-apply-%e7%9a%84%e6%97%b6%e5%80%99%e4%b8%8d%e8%83%bd%e6%98%af%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0">#</a>
+</h4>
+<p>解释：</p>
+<p>箭头函数会强制绑定当前环境下的 <code>this</code>。</p>
+<h3 id="36-对象">
+  3.6 对象
+  <a class="anchor" href="#36-%e5%af%b9%e8%b1%a1">#</a>
+</h3>
+<h4 id="强制-定义方法时使用-methoddefinition-语法不使用-propertyname-functionexpression-语法">
+  [强制] 定义方法时使用 <code>MethodDefinition</code> 语法，不使用 <code>PropertyName: FunctionExpression</code> 语法。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%ae%9a%e4%b9%89%e6%96%b9%e6%b3%95%e6%97%b6%e4%bd%bf%e7%94%a8-methoddefinition-%e8%af%ad%e6%b3%95%e4%b8%8d%e4%bd%bf%e7%94%a8-propertyname-functionexpression-%e8%af%ad%e6%b3%95">#</a>
+</h4>
+<p>解释：</p>
+<p><code>MethodDefinition</code> 语法更清晰简洁。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">bar</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>;
+  }
+};
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">bar</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>;
+  }
+};
+</code></pre></div><h4 id="建议-使用-objectkeys-或-objectentries-进行对象遍历">
+  [建议] 使用 <code>Object.keys</code> 或 <code>Object.entries</code> 进行对象遍历。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-objectkeys-%e6%88%96-objectentries-%e8%bf%9b%e8%a1%8c%e5%af%b9%e8%b1%a1%e9%81%8d%e5%8e%86">#</a>
+</h4>
+<p>解释：</p>
+<p>不建议使用 <code>for .. in</code> 进行对象的遍历，以避免遗漏 <code>hasOwnProperty</code> 产生的错误。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">of</span> Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">foo</span>)) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">foo</span>[<span style="color:#a6e22e">key</span>];
+}
+
+<span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>] <span style="color:#66d9ef">of</span> Object.<span style="color:#a6e22e">entries</span>(<span style="color:#a6e22e">foo</span>)) {
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h4 id="建议-定义对象的方法不应使用箭头函数">
+  [建议] 定义对象的方法不应使用箭头函数。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%ae%9a%e4%b9%89%e5%af%b9%e8%b1%a1%e7%9a%84%e6%96%b9%e6%b3%95%e4%b8%8d%e5%ba%94%e4%bd%bf%e7%94%a8%e7%ae%ad%e5%a4%b4%e5%87%bd%e6%95%b0">#</a>
+</h4>
+<p>解释：</p>
+<p>箭头函数将 <code>this</code> 绑定到当前环境，在 <code>obj.method()</code> 调用时容易导致不期待的 <code>this</code>。除非明确需要绑定 <code>this</code>，否则不应使用箭头函数。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">bar</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>;
+  }
+};
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">bar</span><span style="color:#f92672">:</span> (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>) =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>
+};
+</code></pre></div><h4 id="建议-尽量使用计算属性键在一个完整的字面量中完整地定义一个对象避免对象定义后直接增加对象属性">
+  [建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%b0%bd%e9%87%8f%e4%bd%bf%e7%94%a8%e8%ae%a1%e7%ae%97%e5%b1%9e%e6%80%a7%e9%94%ae%e5%9c%a8%e4%b8%80%e4%b8%aa%e5%ae%8c%e6%95%b4%e7%9a%84%e5%ad%97%e9%9d%a2%e9%87%8f%e4%b8%ad%e5%ae%8c%e6%95%b4%e5%9c%b0%e5%ae%9a%e4%b9%89%e4%b8%80%e4%b8%aa%e5%af%b9%e8%b1%a1%e9%81%bf%e5%85%8d%e5%af%b9%e8%b1%a1%e5%ae%9a%e4%b9%89%e5%90%8e%e7%9b%b4%e6%8e%a5%e5%a2%9e%e5%8a%a0%e5%af%b9%e8%b1%a1%e5%b1%9e%e6%80%a7">#</a>
+</h4>
+<p>解释：</p>
+<p>在一个完整的字面量中声明所有的键值，而不需要将代码分散开来，有助于提升代码可读性。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MY_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {
+  [<span style="color:#a6e22e">MY_KEY</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Hash&#34;</span>]<span style="color:#f92672">:</span> <span style="color:#ae81ff">123</span>
+};
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MY_KEY</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> {};
+<span style="color:#a6e22e">foo</span>[<span style="color:#a6e22e">MY_KEY</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;Hash&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>;
+</code></pre></div><h3 id="37-类">
+  3.7 类
+  <a class="anchor" href="#37-%e7%b1%bb">#</a>
+</h3>
+<h4 id="强制-使用-class-关键字定义一个类">
+  [强制] 使用 <code>class</code> 关键字定义一个类。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-class-%e5%85%b3%e9%94%ae%e5%ad%97%e5%ae%9a%e4%b9%89%e4%b8%80%e4%b8%aa%e7%b1%bb">#</a>
+</h4>
+<p>解释：</p>
+<p>直接使用 <code>class</code> 定义类更清晰。不要再使用 <code>function</code> 和 <code>prototype</code> 形式的定义。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextNode</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">engine</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">engine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">engine</span>;
+  }
+
+  <span style="color:#a6e22e">clone</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
+  }
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">TextNode</span>(<span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">engine</span>) {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">engine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">engine</span>;
+}
+
+<span style="color:#a6e22e">TextNode</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">clone</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>;
+};
+</code></pre></div><h4 id="强制-使用-super-访问父类成员而非父类的-prototype">
+  [强制] 使用 <code>super</code> 访问父类成员，而非父类的 <code>prototype</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8-super-%e8%ae%bf%e9%97%ae%e7%88%b6%e7%b1%bb%e6%88%90%e5%91%98%e8%80%8c%e9%9d%9e%e7%88%b6%e7%b1%bb%e7%9a%84-prototype">#</a>
+</h4>
+<p>解释：</p>
+<p>使用 <code>super</code> 和 <code>super.foo</code> 可以快速访问父类成员，而不必硬编码父类模块而导致修改和维护的不便，同时更节省代码。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextNode</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">engine</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">value</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">engine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">engine</span>;
+  }
+
+  <span style="color:#a6e22e">setNodeValue</span>(<span style="color:#a6e22e">value</span>) {
+    <span style="color:#66d9ef">super</span>.<span style="color:#a6e22e">setNodeValue</span>(<span style="color:#a6e22e">value</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+  }
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextNode</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Node</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">engine</span>) {
+    <span style="color:#a6e22e">Node</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">engine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">engine</span>;
+  }
+
+  <span style="color:#a6e22e">setNodeValue</span>(<span style="color:#a6e22e">value</span>) {
+    <span style="color:#a6e22e">Node</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">setNodeValue</span>.<span style="color:#a6e22e">call</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">value</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+  }
+}
+</code></pre></div><h3 id="38-模块">
+  3.8 模块
+  <a class="anchor" href="#38-%e6%a8%a1%e5%9d%97">#</a>
+</h3>
+<h4 id="建议-相互之间无关联的内容使用命名导出">
+  [建议] 相互之间无关联的内容使用命名导出。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%9b%b8%e4%ba%92%e4%b9%8b%e9%97%b4%e6%97%a0%e5%85%b3%e8%81%94%e7%9a%84%e5%86%85%e5%ae%b9%e4%bd%bf%e7%94%a8%e5%91%bd%e5%90%8d%e5%af%bc%e5%87%ba">#</a>
+</h4>
+<p>解释：</p>
+<p>举个例子，工具对象中的各个方法，相互之间并没有强关联，通常外部会选择几个使用，则应该使用命名导出。</p>
+<p>简而言之，当一个模块只扮演命名空间的作用时，使用命名导出。</p>
+<h4 id="强制-所有-import-语句写在模块开始处">
+  [强制] 所有 <code>import</code> 语句写在模块开始处。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e6%89%80%e6%9c%89-import-%e8%af%ad%e5%8f%a5%e5%86%99%e5%9c%a8%e6%a8%a1%e5%9d%97%e5%bc%80%e5%a7%8b%e5%a4%84">#</a>
+</h4>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">bar</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./bar&#34;</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {
+  <span style="color:#a6e22e">bar</span>.<span style="color:#a6e22e">work</span>();
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">foo</span>() {
+  <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">bar</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./bar&#34;</span>;
+  <span style="color:#a6e22e">bar</span>.<span style="color:#a6e22e">work</span>();
+}
+</code></pre></div><h3 id="39-集合">
+  3.9 集合
+  <a class="anchor" href="#39-%e9%9b%86%e5%90%88">#</a>
+</h3>
+<h4 id="建议-对数组进行连接操作时使用数组展开语法">
+  [建议] 对数组进行连接操作时，使用数组展开语法。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%af%b9%e6%95%b0%e7%bb%84%e8%bf%9b%e8%a1%8c%e8%bf%9e%e6%8e%a5%e6%93%8d%e4%bd%9c%e6%97%b6%e4%bd%bf%e7%94%a8%e6%95%b0%e7%bb%84%e5%b1%95%e5%bc%80%e8%af%ad%e6%b3%95">#</a>
+</h4>
+<p>解释：</p>
+<p>用数组展开代替 <code>concat</code> 方法，数组展开对 <code>Iterable</code> 有更好的兼容性。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">foo</span>, <span style="color:#a6e22e">newValue</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">bar</span>, ...<span style="color:#a6e22e">newValues</span>];
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">foo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">foo</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">newValue</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bar</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">newValues</span>);
+</code></pre></div><h4 id="建议-不要使用数组展开进行数组的复制操作">
+  [建议] 不要使用数组展开进行数组的复制操作。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8%e6%95%b0%e7%bb%84%e5%b1%95%e5%bc%80%e8%bf%9b%e8%a1%8c%e6%95%b0%e7%bb%84%e7%9a%84%e5%a4%8d%e5%88%b6%e6%93%8d%e4%bd%9c">#</a>
+</h4>
+<p>解释：</p>
+<p>使用数组展开语法进行复制，代码可读性较差。推荐使用 <code>Array.from</code> 方法进行复制操作。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">otherArr</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">arr</span>);
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">otherArr</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr</span>];
+</code></pre></div><h4 id="建议-尽可能使用-for--of-进行遍历">
+  [建议] 尽可能使用 <code>for .. of</code> 进行遍历。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%b0%bd%e5%8f%af%e8%83%bd%e4%bd%bf%e7%94%a8-for--of-%e8%bf%9b%e8%a1%8c%e9%81%8d%e5%8e%86">#</a>
+</h4>
+<p>解释：</p>
+<p>使用 <code>for .. of</code> 可以更好地接受任何的 <code>Iterable</code> 对象，如 <code>Map#values</code> 生成的迭代器，使得方法的通用性更强。</p>
+<p>以下情况除外：</p>
+<ol>
+<li>遍历确实成为了性能瓶颈，需要使用原生 <code>for</code> 循环提升性能。</li>
+<li>需要遍历过程中的索引。</li>
+</ol>
+<h4 id="强制-当键值有可能不是字符串时必须使用-map当元素有可能不是字符串时必须使用-set">
+  [强制] 当键值有可能不是字符串时，必须使用 <code>Map</code>；当元素有可能不是字符串时，必须使用 <code>Set</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%bd%93%e9%94%ae%e5%80%bc%e6%9c%89%e5%8f%af%e8%83%bd%e4%b8%8d%e6%98%af%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%97%b6%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8-map%e5%bd%93%e5%85%83%e7%b4%a0%e6%9c%89%e5%8f%af%e8%83%bd%e4%b8%8d%e6%98%af%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%97%b6%e5%bf%85%e9%a1%bb%e4%bd%bf%e7%94%a8-set">#</a>
+</h4>
+<p>解释：</p>
+<p>使用普通 Object，对非字符串类型的 <code>key</code>，需要自己实现序列化。并且运行过程中的对象变化难以通知 Object。</p>
+<h4 id="建议-需要一个不可重复的集合时应使用-set">
+  [建议] 需要一个不可重复的集合时，应使用 <code>Set</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e9%9c%80%e8%a6%81%e4%b8%80%e4%b8%aa%e4%b8%8d%e5%8f%af%e9%87%8d%e5%a4%8d%e7%9a%84%e9%9b%86%e5%90%88%e6%97%b6%e5%ba%94%e4%bd%bf%e7%94%a8-set">#</a>
+</h4>
+<p>解释：</p>
+<p>不要使用 <code>{foo: true}</code> 这样的普通 <code>Object</code>。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">members</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#e6db74">&#34;three&#34;</span>]);
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">members</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">one</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">two</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">three</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+};
+</code></pre></div><h4 id="建议-当需要遍历功能时使用-map-和-set">
+  [建议] 当需要遍历功能时，使用 <code>Map</code> 和 <code>Set</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e5%bd%93%e9%9c%80%e8%a6%81%e9%81%8d%e5%8e%86%e5%8a%9f%e8%83%bd%e6%97%b6%e4%bd%bf%e7%94%a8-map-%e5%92%8c-set">#</a>
+</h4>
+<p>解释：</p>
+<p><code>Map</code> 和 <code>Set</code> 是可遍历对象，能够方便地使用 <code>for...of</code> 遍历。不要使用使用普通 Object。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">membersAge</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>([
+  [<span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#ae81ff">10</span>],
+  [<span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#ae81ff">20</span>],
+  [<span style="color:#e6db74">&#34;three&#34;</span>, <span style="color:#ae81ff">30</span>]
+]);
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> [<span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">value</span>] <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">map</span>) {
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">membersAge</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">one</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+  <span style="color:#a6e22e">two</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>,
+  <span style="color:#a6e22e">three</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>
+};
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">membersAge</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#a6e22e">key</span>)) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">membersAge</span>[<span style="color:#a6e22e">key</span>];
+  }
+}
+</code></pre></div><h4 id="建议-程序运行过程中有添加或移除元素的操作时使用-map-和-set">
+  [建议] 程序运行过程中有添加或移除元素的操作时，使用 <code>Map</code> 和 <code>Set</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%a8%8b%e5%ba%8f%e8%bf%90%e8%a1%8c%e8%bf%87%e7%a8%8b%e4%b8%ad%e6%9c%89%e6%b7%bb%e5%8a%a0%e6%88%96%e7%a7%bb%e9%99%a4%e5%85%83%e7%b4%a0%e7%9a%84%e6%93%8d%e4%bd%9c%e6%97%b6%e4%bd%bf%e7%94%a8-map-%e5%92%8c-set">#</a>
+</h4>
+<p>解释：</p>
+<p>使用 <code>Map</code> 和 <code>Set</code>，程序的可理解性更好；普通 Object 的语义更倾向于表达固定的结构。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">membersAge</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Map</span>();
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;one&#34;</span>, <span style="color:#ae81ff">10</span>);
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;two&#34;</span>, <span style="color:#ae81ff">20</span>);
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;three&#34;</span>, <span style="color:#ae81ff">30</span>);
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#34;one&#34;</span>);
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">membersAge</span> <span style="color:#f92672">=</span> {};
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">one</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">two</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#a6e22e">membersAge</span>.<span style="color:#a6e22e">three</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+<span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">membersAge</span>[<span style="color:#e6db74">&#34;one&#34;</span>];
+</code></pre></div><h3 id="310-异步">
+  3.10 异步
+  <a class="anchor" href="#310-%e5%bc%82%e6%ad%a5">#</a>
+</h3>
+<h4 id="强制-回调函数的嵌套不得超过-3-层">
+  [强制] 回调函数的嵌套不得超过 3 层。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%9b%9e%e8%b0%83%e5%87%bd%e6%95%b0%e7%9a%84%e5%b5%8c%e5%a5%97%e4%b8%8d%e5%be%97%e8%b6%85%e8%bf%87-3-%e5%b1%82">#</a>
+</h4>
+<p>解释：</p>
+<p>深层次的回调函数的嵌套会让代码变得难以阅读。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">userId</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">user</span>) {
+  <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">isValid</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isValid</span>) {
+      <span style="color:#a6e22e">saveReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">user</span>, <span style="color:#66d9ef">function</span>() {
+        <span style="color:#a6e22e">notice</span>(<span style="color:#e6db74">&#34;Saved!&#34;</span>);
+      });
+    }
+  });
+});
+</code></pre></div><h4 id="建议-使用-promise-代替-callback">
+  [建议] 使用 <code>Promise</code> 代替 <code>callback</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-promise-%e4%bb%a3%e6%9b%bf-callback">#</a>
+</h4>
+<p>解释：</p>
+<p>相比 <code>callback</code>，使用 <code>Promise</code> 能够使复杂异步过程的代码更清晰。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span>;
+<span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">userId</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">userObj</span>) {
+    <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">userObj</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>);
+  })
+  .<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">isValid</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isValid</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">saveReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">user</span>);
+    }
+
+    <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;Invalid!&#34;</span>);
+  })
+  .<span style="color:#a6e22e">then</span>(
+    <span style="color:#66d9ef">function</span>() {
+      <span style="color:#a6e22e">notice</span>(<span style="color:#e6db74">&#34;Saved!&#34;</span>);
+    },
+    <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">message</span>) {
+      <span style="color:#a6e22e">notice</span>(<span style="color:#a6e22e">message</span>);
+    }
+  );
+</code></pre></div><h4 id="强制-使用标准的-promise-api">
+  [强制] 使用标准的 <code>Promise</code> API。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%bd%bf%e7%94%a8%e6%a0%87%e5%87%86%e7%9a%84-promise-api">#</a>
+</h4>
+<p>解释：</p>
+<ol>
+<li>不允许使用非标准的 <code>Promise</code> API，如 <code>jQuery</code> 的 <code>Deferred</code>、<code>Q.js</code> 的 <code>defer</code> 等。</li>
+<li>不允许使用非标准的 <code>Promise</code> 扩展 API，如 <code>bluebird</code> 的 <code>Promise.any</code> 等。</li>
+</ol>
+<p>使用标准的 <code>Promise</code> API，当运行环境都支持时，可以把 Promise Lib 直接去掉。</p>
+<h4 id="强制-不允许直接扩展-promise-对象的-prototype">
+  [强制] 不允许直接扩展 <code>Promise</code> 对象的 <code>prototype</code>。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%b8%8d%e5%85%81%e8%ae%b8%e7%9b%b4%e6%8e%a5%e6%89%a9%e5%b1%95-promise-%e5%af%b9%e8%b1%a1%e7%9a%84-prototype">#</a>
+</h4>
+<p>解释：</p>
+<p>理由和 <strong>不允许修改和扩展任何原生对象和宿主对象的原型</strong> 是一样的。如果想要使用更方便，可以用 utility 函数的形式。</p>
+<h4 id="强制-不得为了编写的方便将可以并行的-io-过程串行化">
+  [强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e4%b8%8d%e5%be%97%e4%b8%ba%e4%ba%86%e7%bc%96%e5%86%99%e7%9a%84%e6%96%b9%e4%be%bf%e5%b0%86%e5%8f%af%e4%bb%a5%e5%b9%b6%e8%a1%8c%e7%9a%84-io-%e8%bf%87%e7%a8%8b%e4%b8%b2%e8%a1%8c%e5%8c%96">#</a>
+</h4>
+<p>解释：</p>
+<p>并行 IO 消耗时间约等于 IO 时间最大的那个过程，串行的话消耗时间将是所有过程的时间之和。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">requestData</span>().<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+  <span style="color:#a6e22e">renderTags</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">tags</span>);
+  <span style="color:#a6e22e">renderArticles</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">articles</span>);
+});
+
+<span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">requestData</span>() {
+  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">tags</span>, <span style="color:#a6e22e">articles</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> Promise.<span style="color:#a6e22e">all</span>([
+    <span style="color:#a6e22e">requestTags</span>(),
+    <span style="color:#a6e22e">requestArticles</span>()
+  ]);
+  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">tags</span>, <span style="color:#a6e22e">articles</span> };
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">requestData</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tags</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">requestTags</span>();
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">articles</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">requestArticles</span>();
+
+  <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>({ <span style="color:#a6e22e">tags</span>, <span style="color:#a6e22e">articles</span> });
+}
+</code></pre></div><h4 id="建议-使用-asyncawait-代替-generator--co">
+  [建议] 使用 <code>async/await</code> 代替 <code>generator</code> + <code>co</code>。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-asyncawait-%e4%bb%a3%e6%9b%bf-generator--co">#</a>
+</h4>
+<p>解释：</p>
+<p>使用语言自身的能力可以使代码更清晰，也无需引入 <code>co</code> 库。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">addReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">userId</span>).<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>() {
+    <span style="color:#a6e22e">notice</span>(<span style="color:#e6db74">&#34;Saved!&#34;</span>);
+  },
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">message</span>) {
+    <span style="color:#a6e22e">notice</span>(<span style="color:#a6e22e">message</span>);
+  }
+);
+
+<span style="color:#75715e">// good
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">userId</span>) {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">userId</span>);
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isValid</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>);
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isValid</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">savePromise</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saveReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">user</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">savePromise</span>();
+  }
+
+  <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;Invalid&#34;</span>);
+}
+
+<span style="color:#75715e">// bad
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">userId</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">co</span>(<span style="color:#66d9ef">function</span><span style="color:#f92672">*</span>() {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">getUser</span>(<span style="color:#a6e22e">userId</span>);
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isValid</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">validateUser</span>(<span style="color:#a6e22e">user</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isValid</span>) {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">savePromise</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">saveReport</span>(<span style="color:#a6e22e">report</span>, <span style="color:#a6e22e">user</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">savePromise</span>();
+    }
+
+    <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;Invalid&#34;</span>);
+  });
+}
+</code></pre></div><h2 id="4-环境">
+  4 环境
+  <a class="anchor" href="#4-%e7%8e%af%e5%a2%83">#</a>
+</h2>
+<h3 id="41-运行环境">
+  4.1 运行环境
+  <a class="anchor" href="#41-%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83">#</a>
+</h3>
+<h4 id="建议-持续跟进与关注运行环境对语言特性的支持程度">
+  [建议] 持续跟进与关注运行环境对语言特性的支持程度。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%8c%81%e7%bb%ad%e8%b7%9f%e8%bf%9b%e4%b8%8e%e5%85%b3%e6%b3%a8%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83%e5%af%b9%e8%af%ad%e8%a8%80%e7%89%b9%e6%80%a7%e7%9a%84%e6%94%af%e6%8c%81%e7%a8%8b%e5%ba%a6">#</a>
+</h4>
+<p>解释：</p>
+<p><a href="https://kangax.github.io/compat-table/es6/">查看环境对语言特性的支持程度</a></p>
+<p>ES 标准的制定还在不断进行中，各种环境对语言特性的支持也日新月异。了解项目中用到了哪些 ESNext 的特性，了解项目的运行环境，并持续跟进这些特性在运行环境中的支持程度是很有必要的。这意味着：</p>
+<ol>
+<li>如果有任何一个运行环境（比如 chrome）支持了项目里用到的所有特性，你可以在开发时抛弃预编译。</li>
+<li>如果所有环境都支持了某一特性（比如 Promise），你可以抛弃相关的 shim，或无需在预编译时进行转换。</li>
+<li>如果所有环境都支持了项目里用到的所有特性，你可以完全抛弃预编译。</li>
+</ol>
+<p>无论如何，在选择预编译工具时，你都需要清晰的知道你现阶段将在项目里使用哪些语言特性，然后了解预编译工具对语言特性的支持程度，做出选择。</p>
+<h4 id="强制-在运行环境中没有-promise-时将-promise-的实现-shim-到-global-中">
+  [强制] 在运行环境中没有 <code>Promise</code> 时，将 <code>Promise</code> 的实现 <code>shim</code> 到 <code>global</code> 中。
+  <a class="anchor" href="#%e5%bc%ba%e5%88%b6-%e5%9c%a8%e8%bf%90%e8%a1%8c%e7%8e%af%e5%a2%83%e4%b8%ad%e6%b2%a1%e6%9c%89-promise-%e6%97%b6%e5%b0%86-promise-%e7%9a%84%e5%ae%9e%e7%8e%b0-shim-%e5%88%b0-global-%e4%b8%ad">#</a>
+</h4>
+<p>解释：</p>
+<p>当前运行环境下没有 <code>Promise</code> 时，可以引入 <code>shim</code> 的扩展。如果自己实现，需要实现在 <code>global</code> 下，并且与标准 API 保持一致。</p>
+<p>这样，未来运行环境支持时，可以随时把 <code>Promise</code> 扩展直接扔掉，而应用代码无需任何修改。</p>
+<h3 id="42-预编译">
+  4.2 预编译
+  <a class="anchor" href="#42-%e9%a2%84%e7%bc%96%e8%af%91">#</a>
+</h3>
+<h4 id="建议-使用-babel-做为预编译工具时建议使用-5x-版本">
+  [建议] 使用 <code>babel</code> 做为预编译工具时，建议使用 <code>5.x</code> 版本。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-babel-%e5%81%9a%e4%b8%ba%e9%a2%84%e7%bc%96%e8%af%91%e5%b7%a5%e5%85%b7%e6%97%b6%e5%bb%ba%e8%ae%ae%e4%bd%bf%e7%94%a8-5x-%e7%89%88%e6%9c%ac">#</a>
+</h4>
+<p>解释：</p>
+<p>由于 <code>babel</code> 最新的 <code>6</code> 暂时还不稳定，建议暂时使用 <code>5.x</code>。不同的产品，对于浏览器支持的情况不同，使用 <code>babel</code> 的时候，需要设置的参数也有一些区别。下面在示例中给出一些建议的参数。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">＃ 建议的参数
+--loose all --modules amd --blacklist strict
+
+＃ 如果需要使用 es7.classProperties、es7.decorators 等一些特性，需要额外的 --stage <span style="color:#ae81ff">0</span> 参数
+--loose all --modules amd --blacklist strict --stage <span style="color:#ae81ff">0</span>
+</code></pre></div><h4 id="建议-使用-babel-做为预编译工具时通过-external-helpers-减少生成文件的大小">
+  [建议] 使用 <code>babel</code> 做为预编译工具时，通过 <code>external-helpers</code> 减少生成文件的大小。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-babel-%e5%81%9a%e4%b8%ba%e9%a2%84%e7%bc%96%e8%af%91%e5%b7%a5%e5%85%b7%e6%97%b6%e9%80%9a%e8%bf%87-external-helpers-%e5%87%8f%e5%b0%91%e7%94%9f%e6%88%90%e6%96%87%e4%bb%b6%e7%9a%84%e5%a4%a7%e5%b0%8f">#</a>
+</h4>
+<p>解释：</p>
+<p>当 <code>babel</code> 在转换代码的过程中发现需要一些特性时，会在该文件头部生成对应的 <code>helper</code> 代码。默认情况下，对于每一个经由 <code>babel</code> 处理的文件，均会在文件头部生成对应需要的辅助函数，多份文件辅助函数存在重复，占用了不必要的代码体积。</p>
+<p>因此推荐打开<code>externalHelpers: true</code>选项，使 <code>babel</code> 在转换后内容中不写入 <code>helper</code> 相关的代码，而是使用一个外部的 <code>.js</code>统一提供所有的 <code>helper</code>。对于<a href="https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/external-helpers.md">external-helpers</a>的使用，可以有两种方式：</p>
+<ol>
+<li>默认方式：需要通过 <code>&lt;script&gt;</code> 自行引入<code>babel-polyfill.js</code> 和 <code>babel-external-helpers.js</code>。</li>
+<li>定制方式：自己实现 <a href="https://github.com/babel/babel.github.io/blob/5.0.0/docs/usage/runtime.md">babel-runtime</a>。</li>
+</ol>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 默认方式</span>
+--loose all --modules amd --external-helpers
+<span style="color:#75715e"># `babelHelpers` 的代码可以通过执行 `babel-external-helpers -t var` 得到所有相关API的实现</span>
+
+<span style="color:#75715e"># 定制方式</span>
+--loose all --modules amd --optional runtime
+</code></pre></div><h4 id="建议-使用-typescript-做为预编译工具时建议使用-16-版本">
+  [建议] 使用 <code>TypeScript</code> 做为预编译工具时，建议使用 <code>1.6+</code> 版本。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-typescript-%e5%81%9a%e4%b8%ba%e9%a2%84%e7%bc%96%e8%af%91%e5%b7%a5%e5%85%b7%e6%97%b6%e5%bb%ba%e8%ae%ae%e4%bd%bf%e7%94%a8-16-%e7%89%88%e6%9c%ac">#</a>
+</h4>
+<p>解释：</p>
+<p><code>TypeScript</code> 1.6 之后，基本摒弃了之前的与 ESNext 相冲突的地方。目前 <code>TypeScript</code> 的思路就是遵循标准，将 stage 已经足够成熟的功能纳入，并提供静态类型和类型检查，所以其在 stage 0/1 的支持上不如 <code>babel</code>。另外，<code>TypeScript</code> 不能指定关闭某个 transform，但其编译速度比 <code>babel</code> 更高。</p>
+<p><code>TypeScript</code> 的常用参数在下面给出了示例。</p>
+<p>示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">--module amd --target ES3
+--module commonjs --target ES6
+</code></pre></div><h4 id="建议-使用-typescript-做为预编译工具时不使用-tsc-命令">
+  [建议] 使用 <code>TypeScript</code> 做为预编译工具时，不使用 <code>tsc</code> 命令。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e4%bd%bf%e7%94%a8-typescript-%e5%81%9a%e4%b8%ba%e9%a2%84%e7%bc%96%e8%af%91%e5%b7%a5%e5%85%b7%e6%97%b6%e4%b8%8d%e4%bd%bf%e7%94%a8-tsc-%e5%91%bd%e4%bb%a4">#</a>
+</h4>
+<p>解释：</p>
+<p><code>TypeScript</code> 提供的 <code>tsc</code> 命令只支持后缀名 <code>.ts</code>、<code>.tsx</code>、<code>.d.ts</code> 的文件编译，对于 JavaScript 来说，保持后缀名为 <code>.js</code> 是原则，本文档的 <code>文件</code> 章节也有所要求。</p>
+<p>如果要使用 <code>TypeScript</code> 做为预编译工具，可基于其 <a href="https://github.com/Microsoft/TypeScript/wiki/Using-the-Compiler-API">Compiler API</a> 开发自己的预编译工具。如果你是 FIS 用户，可以使用 <a href="https://github.com/fex-team/fis3-parser-typescript">FIS TypeScript 插件</a>。</p>
+<h4 id="建议-生成的代码在浏览器环境运行时应生成-amd-模块化代码">
+  [建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e7%94%9f%e6%88%90%e7%9a%84%e4%bb%a3%e7%a0%81%e5%9c%a8%e6%b5%8f%e8%a7%88%e5%99%a8%e7%8e%af%e5%a2%83%e8%bf%90%e8%a1%8c%e6%97%b6%e5%ba%94%e7%94%9f%e6%88%90-amd-%e6%a8%a1%e5%9d%97%e5%8c%96%e4%bb%a3%e7%a0%81">#</a>
+</h4>
+<p>解释：</p>
+<p>AMD 在浏览器环境应用较为成熟。</p>
+<h4 id="建议-浏览器端项目中如果-esnext-代码和-es35-代码混合不要使用-typescript-做为预编译工具">
+  [建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 <code>TypeScript</code> 做为预编译工具。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-%e6%b5%8f%e8%a7%88%e5%99%a8%e7%ab%af%e9%a1%b9%e7%9b%ae%e4%b8%ad%e5%a6%82%e6%9e%9c-esnext-%e4%bb%a3%e7%a0%81%e5%92%8c-es35-%e4%bb%a3%e7%a0%81%e6%b7%b7%e5%90%88%e4%b8%8d%e8%a6%81%e4%bd%bf%e7%94%a8-typescript-%e5%81%9a%e4%b8%ba%e9%a2%84%e7%bc%96%e8%af%91%e5%b7%a5%e5%85%b7">#</a>
+</h4>
+<p>解释：</p>
+<p><code>TypeScript</code> 产生的 module 代码使用 exports.default 导出默认的 export，但是没有直接为 module.exports 赋值，导致在另外一个普通文件中使用 require(&lsquo;moduleName&rsquo;) 是拿不到东西的。</p>
+<p>需要使用 <code>TypeScript</code> 的话，建议整个项目所有文件都是 ESNext module 的，采用混合的 module 容易出现不可预期的结果。</p>
+<h4 id="建议-amdcommonjs-模块依赖-esnext-模块时amdcommonjs-模块对-default-export-的-require-需要改造">
+  [建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。
+  <a class="anchor" href="#%e5%bb%ba%e8%ae%ae-amdcommonjs-%e6%a8%a1%e5%9d%97%e4%be%9d%e8%b5%96-esnext-%e6%a8%a1%e5%9d%97%e6%97%b6amdcommonjs-%e6%a8%a1%e5%9d%97%e5%af%b9-default-export-%e7%9a%84-require-%e9%9c%80%e8%a6%81%e6%94%b9%e9%80%a0">#</a>
+</h4>
+<p>解释：</p>
+<p>ESNext 模块经过编译后，named export 会挂载在 exports 对象上，default export 也会挂载在 exports 对象上名称为 default 的属性。同时 exports 对象会包含一个值为 true 的 __esModule 属性。那么问题来了，当 AMD/CommonJS 模块依赖了 ESNext 模块时，require 期望拿到的是 exports.default，但你实际上拿到的是 exports。</p>
+<p>所以，老的 AMD/CommonJS 模块依赖了 default export 的 ESNext 模块时，对 default export 的 require 需要改造成 <code>require('name').default</code>。</p>
+<p>另外，如果是 ESNext 模块之间的互相依赖，transpiler 会通过加入中间对象和引入 interop 方法，所以不会产生这个问题。</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/ikingye/study-javascript/commit/78eed233452ecd850a6bf705eb9ed88da6a6f21c" title='Last modified by yewang | 2020-08-04' target="_blank" rel="noopener">
+      <img src="/study-javascript/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-08-04</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        <div>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <p><span id="busuanzi_container_page_pv">本文访问量 <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次</span></p>
+    <p><span id="busuanzi_container_site_uv">本站总访客数 <span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</span></p>
+</div>
+
+
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<script src="https://utteranc.es/client.js"
+  repo="ikingye/study-javascript"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+<div id="footer">
+  <p>
+    <a href="https://kingye.me">叶王</a> &copy; 2013-2021
+    版权所有。如果本文档对你有所帮助，可以<a
+      href="https://cdn.jsdelivr.net/gh/ikingye/imagehost/picgo/20200428110046.png"
+      target="_blank"
+      rel="noopener noreferrer"
+      >请作者喝饮料</a
+    >。
+  </p>
+</div>
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-前言">1 前言</a></li>
+    <li><a href="#2-代码风格">2 代码风格</a>
+      <ul>
+        <li><a href="#21-文件">2.1 文件</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#建议-esnext-语法的-javascript-文件使用-js-扩展名">[建议] ESNext 语法的 JavaScript 文件使用 <code>.js</code> 扩展名。</a></li>
+                <li><a href="#强制-当文件无法使用-js-扩展名时使用-es-扩展名">[强制] 当文件无法使用 <code>.js</code> 扩展名时，使用 <code>.es</code> 扩展名。</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#22-结构">2.2 结构</a>
+          <ul>
+            <li><a href="#221-缩进">2.2.1 缩进</a>
+              <ul>
+                <li><a href="#建议-使用多行模板字符串时遵循缩进原则当空行与空白字符敏感时不使用多行模板字符串">[建议] 使用多行模板字符串时遵循缩进原则。当空行与空白字符敏感时，不使用多行模板字符串。</a></li>
+              </ul>
+            </li>
+            <li><a href="#222-空格">2.2.2 空格</a>
+              <ul>
+                <li><a href="#强制-使用-generator-时-前面不允许有空格-后面必须有一个空格">[强制] 使用 <code>generator</code> 时，<code>*</code> 前面不允许有空格，<code>*</code> 后面必须有一个空格。</a></li>
+              </ul>
+            </li>
+            <li><a href="#223-语句">2.2.3 语句</a>
+              <ul>
+                <li><a href="#强制-类声明结束不允许添加分号">[强制] 类声明结束不允许添加分号。</a></li>
+                <li><a href="#强制-类成员定义中方法定义后不允许添加分号成员属性定义后必须添加分号">[强制] 类成员定义中，方法定义后不允许添加分号，成员属性定义后必须添加分号。</a></li>
+                <li><a href="#强制-export-语句后不允许出现表示空语句的分号">[强制] <code>export</code> 语句后，不允许出现表示空语句的分号。</a></li>
+                <li><a href="#强制-属性装饰器后可以不加分号的场景不允许加分号">[强制] 属性装饰器后，可以不加分号的场景，不允许加分号。</a></li>
+                <li><a href="#强制-箭头函数的参数只有一个并且不包含解构时参数部分的括号必须省略">[强制] 箭头函数的参数只有一个，并且不包含解构时，参数部分的括号必须省略。</a></li>
+                <li><a href="#建议-箭头函数的函数体只有一个单行表达式语句且作为返回值时省略--和-return">[建议] 箭头函数的函数体只有一个单行表达式语句，且作为返回值时，省略 <code>{}</code> 和 <code>return</code>。</a></li>
+                <li><a href="#建议-箭头函数的函数体只有一个-object-literal且作为返回值时使用--包裹">[建议] 箭头函数的函数体只有一个 <code>Object Literal</code>，且作为返回值时，使用 <code>()</code> 包裹。</a></li>
+                <li><a href="#强制-解构多个变量时如果超过行长度限制每个解构的变量必须单独一行">[强制] 解构多个变量时，如果超过行长度限制，每个解构的变量必须单独一行。</a></li>
+              </ul>
+            </li>
+            <li><a href="#强制-对于对象初始化数组初始化import及export语句当其多个子元素占用多行时最后一个元素后必须保留逗号">[强制] 对于对象初始化、数组初始化、<code>import</code>及<code>export</code>语句，当其多个子元素占用多行时，最后一个元素后必须保留逗号。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#3-语言特性">3 语言特性</a>
+      <ul>
+        <li><a href="#31-变量">3.1 变量</a>
+          <ul>
+            <li><a href="#强制-使用-let-和-const-定义变量不使用-var">[强制] 使用 <code>let</code> 和 <code>const</code> 定义变量，不使用 <code>var</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#32-解构">3.2 解构</a>
+          <ul>
+            <li><a href="#强制-不要使用-3-层及以上的解构">[强制] 不要使用 3 层及以上的解构。</a></li>
+            <li><a href="#建议-使用解构减少中间变量">[建议] 使用解构减少中间变量。</a></li>
+            <li><a href="#强制-如果不节省编写时产生的中间变量解构表达式--号右边不允许是-objectliteral-和-arrayliteral">[强制] 如果不节省编写时产生的中间变量，解构表达式 <code>=</code> 号右边不允许是 <code>ObjectLiteral</code> 和 <code>ArrayLiteral</code>。</a></li>
+            <li><a href="#强制-使用剩余运算符时剩余运算符之前的所有元素必需具名">[强制] 使用剩余运算符时，剩余运算符之前的所有元素必需具名。</a></li>
+          </ul>
+        </li>
+        <li><a href="#33-模板字符串">3.3 模板字符串</a>
+          <ul>
+            <li><a href="#强制-字符串内变量替换时不要使用-2-次及以上的函数调用">[强制] 字符串内变量替换时，不要使用 <code>2</code> 次及以上的函数调用。</a></li>
+          </ul>
+        </li>
+        <li><a href="#34-函数">3.4 函数</a>
+          <ul>
+            <li><a href="#建议-使用变量默认语法代替基于条件判断的默认值声明">[建议] 使用变量默认语法代替基于条件判断的默认值声明。</a></li>
+            <li><a href="#强制-不要使用-arguments-对象应使用-args-代替">[强制] 不要使用 <code>arguments</code> 对象，应使用 <code>...args</code> 代替。</a></li>
+          </ul>
+        </li>
+        <li><a href="#35-箭头函数">3.5 箭头函数</a>
+          <ul>
+            <li><a href="#强制-一个函数被设计为需要-call-和-apply-的时候不能是箭头函数">[强制] 一个函数被设计为需要 <code>call</code> 和 <code>apply</code> 的时候，不能是箭头函数。</a></li>
+          </ul>
+        </li>
+        <li><a href="#36-对象">3.6 对象</a>
+          <ul>
+            <li><a href="#强制-定义方法时使用-methoddefinition-语法不使用-propertyname-functionexpression-语法">[强制] 定义方法时使用 <code>MethodDefinition</code> 语法，不使用 <code>PropertyName: FunctionExpression</code> 语法。</a></li>
+            <li><a href="#建议-使用-objectkeys-或-objectentries-进行对象遍历">[建议] 使用 <code>Object.keys</code> 或 <code>Object.entries</code> 进行对象遍历。</a></li>
+            <li><a href="#建议-定义对象的方法不应使用箭头函数">[建议] 定义对象的方法不应使用箭头函数。</a></li>
+            <li><a href="#建议-尽量使用计算属性键在一个完整的字面量中完整地定义一个对象避免对象定义后直接增加对象属性">[建议] 尽量使用计算属性键在一个完整的字面量中完整地定义一个对象，避免对象定义后直接增加对象属性。</a></li>
+          </ul>
+        </li>
+        <li><a href="#37-类">3.7 类</a>
+          <ul>
+            <li><a href="#强制-使用-class-关键字定义一个类">[强制] 使用 <code>class</code> 关键字定义一个类。</a></li>
+            <li><a href="#强制-使用-super-访问父类成员而非父类的-prototype">[强制] 使用 <code>super</code> 访问父类成员，而非父类的 <code>prototype</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#38-模块">3.8 模块</a>
+          <ul>
+            <li><a href="#建议-相互之间无关联的内容使用命名导出">[建议] 相互之间无关联的内容使用命名导出。</a></li>
+            <li><a href="#强制-所有-import-语句写在模块开始处">[强制] 所有 <code>import</code> 语句写在模块开始处。</a></li>
+          </ul>
+        </li>
+        <li><a href="#39-集合">3.9 集合</a>
+          <ul>
+            <li><a href="#建议-对数组进行连接操作时使用数组展开语法">[建议] 对数组进行连接操作时，使用数组展开语法。</a></li>
+            <li><a href="#建议-不要使用数组展开进行数组的复制操作">[建议] 不要使用数组展开进行数组的复制操作。</a></li>
+            <li><a href="#建议-尽可能使用-for--of-进行遍历">[建议] 尽可能使用 <code>for .. of</code> 进行遍历。</a></li>
+            <li><a href="#强制-当键值有可能不是字符串时必须使用-map当元素有可能不是字符串时必须使用-set">[强制] 当键值有可能不是字符串时，必须使用 <code>Map</code>；当元素有可能不是字符串时，必须使用 <code>Set</code>。</a></li>
+            <li><a href="#建议-需要一个不可重复的集合时应使用-set">[建议] 需要一个不可重复的集合时，应使用 <code>Set</code>。</a></li>
+            <li><a href="#建议-当需要遍历功能时使用-map-和-set">[建议] 当需要遍历功能时，使用 <code>Map</code> 和 <code>Set</code>。</a></li>
+            <li><a href="#建议-程序运行过程中有添加或移除元素的操作时使用-map-和-set">[建议] 程序运行过程中有添加或移除元素的操作时，使用 <code>Map</code> 和 <code>Set</code>。</a></li>
+          </ul>
+        </li>
+        <li><a href="#310-异步">3.10 异步</a>
+          <ul>
+            <li><a href="#强制-回调函数的嵌套不得超过-3-层">[强制] 回调函数的嵌套不得超过 3 层。</a></li>
+            <li><a href="#建议-使用-promise-代替-callback">[建议] 使用 <code>Promise</code> 代替 <code>callback</code>。</a></li>
+            <li><a href="#强制-使用标准的-promise-api">[强制] 使用标准的 <code>Promise</code> API。</a></li>
+            <li><a href="#强制-不允许直接扩展-promise-对象的-prototype">[强制] 不允许直接扩展 <code>Promise</code> 对象的 <code>prototype</code>。</a></li>
+            <li><a href="#强制-不得为了编写的方便将可以并行的-io-过程串行化">[强制] 不得为了编写的方便，将可以并行的 IO 过程串行化。</a></li>
+            <li><a href="#建议-使用-asyncawait-代替-generator--co">[建议] 使用 <code>async/await</code> 代替 <code>generator</code> + <code>co</code>。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-环境">4 环境</a>
+      <ul>
+        <li><a href="#41-运行环境">4.1 运行环境</a>
+          <ul>
+            <li><a href="#建议-持续跟进与关注运行环境对语言特性的支持程度">[建议] 持续跟进与关注运行环境对语言特性的支持程度。</a></li>
+            <li><a href="#强制-在运行环境中没有-promise-时将-promise-的实现-shim-到-global-中">[强制] 在运行环境中没有 <code>Promise</code> 时，将 <code>Promise</code> 的实现 <code>shim</code> 到 <code>global</code> 中。</a></li>
+          </ul>
+        </li>
+        <li><a href="#42-预编译">4.2 预编译</a>
+          <ul>
+            <li><a href="#建议-使用-babel-做为预编译工具时建议使用-5x-版本">[建议] 使用 <code>babel</code> 做为预编译工具时，建议使用 <code>5.x</code> 版本。</a></li>
+            <li><a href="#建议-使用-babel-做为预编译工具时通过-external-helpers-减少生成文件的大小">[建议] 使用 <code>babel</code> 做为预编译工具时，通过 <code>external-helpers</code> 减少生成文件的大小。</a></li>
+            <li><a href="#建议-使用-typescript-做为预编译工具时建议使用-16-版本">[建议] 使用 <code>TypeScript</code> 做为预编译工具时，建议使用 <code>1.6+</code> 版本。</a></li>
+            <li><a href="#建议-使用-typescript-做为预编译工具时不使用-tsc-命令">[建议] 使用 <code>TypeScript</code> 做为预编译工具时，不使用 <code>tsc</code> 命令。</a></li>
+            <li><a href="#建议-生成的代码在浏览器环境运行时应生成-amd-模块化代码">[建议] 生成的代码在浏览器环境运行时，应生成 AMD 模块化代码。</a></li>
+            <li><a href="#建议-浏览器端项目中如果-esnext-代码和-es35-代码混合不要使用-typescript-做为预编译工具">[建议] 浏览器端项目中如果 ESNext 代码和 ES3/5 代码混合，不要使用 <code>TypeScript</code> 做为预编译工具。</a></li>
+            <li><a href="#建议-amdcommonjs-模块依赖-esnext-模块时amdcommonjs-模块对-default-export-的-require-需要改造">[建议] AMD/CommonJS 模块依赖 ESNext 模块时，AMD/CommonJS 模块对 default export 的 require 需要改造。</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
