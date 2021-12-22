@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>百度前端编程规范 on JavaScript 学习笔记</title>
-    <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/</link>
+    <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/</link>
     <description>Recent content in 百度前端编程规范 on JavaScript 学习笔记</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/css/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/css/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/css/</guid>
       <description>CSS 编码规范 #  1 前言
 2 代码风格
 2.1 文件
@@ -48,10 +48,10 @@
     
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/es-next/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/es-next/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/es-next/</guid>
       <description>JavaScript 编码规范 - ESNext 补充篇（草案） #  1 前言
 2 代码风格
 2.1 文件
@@ -81,10 +81,10 @@
     
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/html/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/html/</guid>
       <description>HTML 编码规范 #  1 前言
 2 代码风格
 2.1 缩进与换行
@@ -113,10 +113,10 @@
     
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/react/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/react/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/react/</guid>
       <description>React 编码规范 #  1 版本限制
 1.1 法律要求
 2 文件组织
@@ -145,10 +145,10 @@
     
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/typescript/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/typescript/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/typescript/</guid>
       <description>TypeScript 编码规范 #  1 前言
 2 代码风格
 2.1 环境
@@ -173,10 +173,10 @@
     
     <item>
       <title></title>
-      <link>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/vue/</link>
+      <link>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/vue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ikingye.github.io/study-javascript/docs/basic/practice/spec/baidu/vue/</guid>
+      <guid>https://kingye.me/study-javascript/docs/basic/practice/spec/baidu/vue/</guid>
       <description>Vue 组件代码规范 #  1 前言
 2 代码风格
 2.1 缩进
