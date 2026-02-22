@@ -1,60 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第四部分 附录 on JavaScript 学习笔记</title><link>https://kingye.me/study-javascript/docs/appendix/</link><description>Recent content in 第四部分 附录 on JavaScript 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-javascript/docs/appendix/index.xml" rel="self" type="application/rss+xml"/><item><title>教程</title><link>https://kingye.me/study-javascript/docs/appendix/turorial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-javascript/docs/appendix/turorial/</guid><description>&lt;h1 id="教程"&gt;
- 教程
- 
- &lt;a class="anchor" href="#%e6%95%99%e7%a8%8b"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
-&lt;h2 id="基础"&gt;
- 基础
- 
- &lt;a class="anchor" href="#%e5%9f%ba%e7%a1%80"&gt;#&lt;/a&gt;
- 
-&lt;/h2&gt;
-&lt;h3 id="ruanyfjstraining-github-stars"&gt;
- &lt;a href="https://github.com/ruanyf/jstraining"&gt;ruanyf/jstraining&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/ruanyf/jstraining.svg" alt="Github stars" /&gt;
- 
- &lt;a class="anchor" href="#ruanyfjstraining-github-stars"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>第四部分 附录 on JavaScript 学习笔记</title><link>https://kingye.me/study-javascript/docs/appendix/</link><description>Recent content in 第四部分 附录 on JavaScript 学习笔记</description><generator>Hugo</generator><language>en</language><atom:link href="https://kingye.me/study-javascript/docs/appendix/index.xml" rel="self" type="application/rss+xml"/><item><title>教程</title><link>https://kingye.me/study-javascript/docs/appendix/turorial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-javascript/docs/appendix/turorial/</guid><description>&lt;h1 id="教程"&gt;教程&lt;a class="anchor" href="#%e6%95%99%e7%a8%8b"&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="基础"&gt;基础&lt;a class="anchor" href="#%e5%9f%ba%e7%a1%80"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="ruanyfjstraining-github-stars"&gt;&lt;a href="https://github.com/ruanyf/jstraining"&gt;ruanyf/jstraining&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/ruanyf/jstraining.svg" alt="Github stars" /&gt;&lt;a class="anchor" href="#ruanyfjstraining-github-stars"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;全栈工程师培训材料，帮助学习者掌握 JavaScript 全栈开发的基本知识，承担简单 Web 应用的前后端开发。&lt;/p&gt;
 &lt;p&gt;一共四讲，适合两天的训练营。&lt;/p&gt;
-&lt;h3 id="denysdovhanwtfjs-github-stars"&gt;
- &lt;a href="https://github.com/denysdovhan/wtfjs"&gt;denysdovhan/wtfjs&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/denysdovhan/wtfjs.svg" alt="Github stars" /&gt;
- 
- &lt;a class="anchor" href="#denysdovhanwtfjs-github-stars"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;h3 id="denysdovhanwtfjs-github-stars"&gt;&lt;a href="https://github.com/denysdovhan/wtfjs"&gt;denysdovhan/wtfjs&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/denysdovhan/wtfjs.svg" alt="Github stars" /&gt;&lt;a class="anchor" href="#denysdovhanwtfjs-github-stars"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A list of funny and tricky JavaScript examples&lt;/p&gt;
-&lt;h3 id="nefeyou-dont-need-jquery-github-stars"&gt;
- &lt;a href="https://github.com/nefe/You-Dont-Need-jQuery"&gt;nefe/You-Dont-Need-jQuery&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/nefe/You-Dont-Need-jQuery.svg" alt="Github stars" /&gt;
- 
- &lt;a class="anchor" href="#nefeyou-dont-need-jquery-github-stars"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;h3 id="nefeyou-dont-need-jquery-github-stars"&gt;&lt;a href="https://github.com/nefe/You-Dont-Need-jQuery"&gt;nefe/You-Dont-Need-jQuery&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/nefe/You-Dont-Need-jQuery.svg" alt="Github stars" /&gt;&lt;a class="anchor" href="#nefeyou-dont-need-jquery-github-stars"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;使用原生方法实现 jQuery API 功能（暂时只支持 IE10 以上浏览器）。&lt;/p&gt;
-&lt;h3 id="verekiajs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;
- &lt;a href="https://github.com/verekia/js-stack-from-scratch"&gt;verekia/js-stack-from-scratch&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/verekia/js-stack-from-scratch.svg" alt="Github stars" /&gt; &lt;img src="https://img.shields.io/github/languages/top/verekia/js-stack-from-scratch.svg" alt="Language" /&gt; &lt;img src="https://img.shields.io/github/v/tag/verekia/js-stack-from-scratch.svg?sort=semver" alt="Last Tag" /&gt; &lt;img src="https://img.shields.io/github/last-commit/verekia/js-stack-from-scratch.svg" alt="Last commit" /&gt;
- 
- &lt;a class="anchor" href="#verekiajs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;h3 id="verekiajs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;&lt;a href="https://github.com/verekia/js-stack-from-scratch"&gt;verekia/js-stack-from-scratch&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/verekia/js-stack-from-scratch.svg" alt="Github stars" /&gt; &lt;img src="https://img.shields.io/github/languages/top/verekia/js-stack-from-scratch.svg" alt="Language" /&gt; &lt;img src="https://img.shields.io/github/v/tag/verekia/js-stack-from-scratch.svg?sort=semver" alt="Last Tag" /&gt; &lt;img src="https://img.shields.io/github/last-commit/verekia/js-stack-from-scratch.svg" alt="Last commit" /&gt;&lt;a class="anchor" href="#verekiajs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;🛠️⚡ Step-by-step tutorial to build a modern JavaScript stack.&lt;/p&gt;
-&lt;h4 id="lowerfishjs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;
- &lt;a href="https://github.com/lowerfish/js-stack-from-scratch"&gt;lowerfish/js-stack-from-scratch&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/lowerfish/js-stack-from-scratch.svg" alt="Github stars" /&gt; &lt;img src="https://img.shields.io/github/languages/top/lowerfish/js-stack-from-scratch.svg" alt="Language" /&gt; &lt;img src="https://img.shields.io/github/v/tag/lowerfish/js-stack-from-scratch.svg?sort=semver" alt="Last Tag" /&gt; &lt;img src="https://img.shields.io/github/last-commit/lowerfish/js-stack-from-scratch.svg" alt="Last commit" /&gt;
- 
- &lt;a class="anchor" href="#lowerfishjs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;#&lt;/a&gt;
- 
-&lt;/h4&gt;
-&lt;p&gt;从零开始构建 JavaScript 技术栈 第 2 版&lt;/p&gt;</description></item><item><title>4.3 关注项目</title><link>https://kingye.me/study-javascript/docs/appendix/attention/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-javascript/docs/appendix/attention/</guid><description>&lt;h1 id="关注项目"&gt;
- 关注项目
- 
- &lt;a class="anchor" href="#%e5%85%b3%e6%b3%a8%e9%a1%b9%e7%9b%ae"&gt;#&lt;/a&gt;
- 
-&lt;/h1&gt;
-&lt;h3 id="octokitrestjs-github-stars"&gt;
- &lt;a href="https://github.com/octokit/rest.js"&gt;octokit/rest.js&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/octokit/rest.js.svg" alt="Github stars" /&gt;
- 
- &lt;a class="anchor" href="#octokitrestjs-github-stars"&gt;#&lt;/a&gt;
- 
-&lt;/h3&gt;
+&lt;h4 id="lowerfishjs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;&lt;a href="https://github.com/lowerfish/js-stack-from-scratch"&gt;lowerfish/js-stack-from-scratch&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/lowerfish/js-stack-from-scratch.svg" alt="Github stars" /&gt; &lt;img src="https://img.shields.io/github/languages/top/lowerfish/js-stack-from-scratch.svg" alt="Language" /&gt; &lt;img src="https://img.shields.io/github/v/tag/lowerfish/js-stack-from-scratch.svg?sort=semver" alt="Last Tag" /&gt; &lt;img src="https://img.shields.io/github/last-commit/lowerfish/js-stack-from-scratch.svg" alt="Last commit" /&gt;&lt;a class="anchor" href="#lowerfishjs-stack-from-scratch-github-stars-language-last-tag-last-commit"&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;从零开始构建 JavaScript 技术栈 第 2 版&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="进阶"&gt;进阶&lt;a class="anchor" href="#%e8%bf%9b%e9%98%b6"&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;hr&gt;</description></item><item><title>4.3 关注项目</title><link>https://kingye.me/study-javascript/docs/appendix/attention/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://kingye.me/study-javascript/docs/appendix/attention/</guid><description>&lt;h1 id="关注项目"&gt;关注项目&lt;a class="anchor" href="#%e5%85%b3%e6%b3%a8%e9%a1%b9%e7%9b%ae"&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;h3 id="octokitrestjs-github-stars"&gt;&lt;a href="https://github.com/octokit/rest.js"&gt;octokit/rest.js&lt;/a&gt; &lt;img src="https://img.shields.io/github/stars/octokit/rest.js.svg" alt="Github stars" /&gt;&lt;a class="anchor" href="#octokitrestjs-github-stars"&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;GitHub REST API client for JavaScript &lt;a href="https://octokit.github.io/rest.js/"&gt;https://octokit.github.io/rest.js/&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
